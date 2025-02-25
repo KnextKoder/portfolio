@@ -3,8 +3,6 @@ import Image from "next/image"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import Footer from "@/components/footer"
-import { PanelRightOpen } from "lucide-react"
-import { useSidebar } from "@/components/sidebar-provider"
 
 interface Project {
   slug: string
@@ -63,7 +61,6 @@ const techStack = [
 ]
 
 export default function Home() {
-  const { toggle } = useSidebar()
   return (
     <main className="max-w-4xl w-full mx-auto py-20 px-4 md:px-10">
       <span className="text-4xl">👋</span>
@@ -138,12 +135,7 @@ export default function Home() {
           />
         ))}
       </div>
-
       <Footer />
-
-      <button className="fixed lg:hidden bottom-4 right-4 h-8 w-8 border border-neutral-200 rounded-full backdrop-blur-sm flex items-center justify-center z-50" onClick={toggle}>
-        <PanelRightOpen className="h-4 w-4 text-primary" />
-      </button>
     </main>
   )
 }
