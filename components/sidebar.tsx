@@ -1,36 +1,52 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
-import { Zap, MessageSquare, Briefcase, FileText, Mail, Twitter, Linkedin, Youtube, ChevronRight } from "lucide-react"
+import { Zap, MessageSquare, Briefcase, FileText, Mail, Twitter, Linkedin, ChevronRight, Github } from "lucide-react"
+import { usePathname } from 'next/navigation'
+import { useSidebar } from "./sidebar-provider"
 
 const navItems = [
   { href: "/", icon: Zap, text: "Home" },
   { href: "/about", icon: MessageSquare, text: "About" },
   { href: "/projects", icon: Briefcase, text: "Projects" },
-  { href: "/blog", icon: FileText, text: "Articles" },
+  { href: "/research", icon: FileText, text: "Research" },
   { href: "/contact", icon: Mail, text: "Contact" },
 ]
 
 const socialItems = [
-  { href: "https://twitter.com/mannupaaji", icon: Twitter, text: "Twitter" },
-  { href: "https://linkedin.com/in/manuarora28", icon: Linkedin, text: "LinkedIn" },
-  { href: "https://youtube.com/maninthere", icon: Youtube, text: "YouTube" },
+  { href: "https://github.com/KnextKoder", icon: Github, text: "Github" },
+  { href: "https://twitter.com/marvel0_", icon: Twitter, text: "Twitter" },
+  { href: "https://linkedin.com/in/marvelous-adesina-271b2128b", icon: Linkedin, text: "LinkedIn" },
 ]
 
 export default function Sidebar() {
+  const { isOpen } = useSidebar()
+  const pathname = usePathname();
+  console.log(pathname);
+  const currentPath = pathname;
+
   return (
-    <aside className="px-6 z-[100] py-10 bg-neutral-100 max-w-[14rem] lg:w-fit fixed lg:relative h-screen left-0 flex flex-col justify-between">
+    <aside
+      className={`px-6 z-[100] py-10 bg-neutral-100 max-w-[14rem] lg:w-fit fixed lg:relative h-screen left-0 flex flex-col justify-between transition-transform duration-300 ${
+        isOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"
+      }`}
+    >
       <div className="flex-1 overflow-auto">
         <div className="flex space-x-2">
           <Image
-            src="https://images.unsplash.com/photo-1633332755192-727a05c4013d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1760&q=80"
+            src="/profile.jpg"
             alt="Avatar"
             width={40}
             height={40}
             className="object-cover object-top rounded-full flex-shrink-0"
+            loading="lazy"
+            decoding="async"
+            data-nimg="1"
+            style={{ color: 'transparent' }}
           />
           <div className="flex text-sm flex-col">
-            <p className="font-bold text-primary">John Doe</p>
-            <p className="font-light text-secondary">Developer</p>
+            <p className="font-bold text-primary">Marvel</p>
+            <p className="font-light text-primary">Developer</p>
           </div>
         </div>
 
@@ -39,9 +55,13 @@ export default function Sidebar() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-secondary hover:text-primary transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm"
+              className={`hover:text-primary transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm ${
+                currentPath === item.href ? "bg-white shadow-lg text-primary" : ""
+              }`}
             >
-              <item.icon className="h-4 w-4 flex-shrink-0" />
+              <item.icon
+                className={`h-4 w-4 flex-shrink-0 ${currentPath === item.href ? "text-sky-500" : ""}`}
+              />
               <span>{item.text}</span>
             </Link>
           ))}
@@ -54,7 +74,7 @@ export default function Sidebar() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-secondary hover:text-primary transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm"
+              className="text-primary hover:text-primary transition duration-200 flex items-center space-x-2 py-2 px-2 rounded-md text-sm"
             >
               <item.icon className="h-4 w-4 flex-shrink-0" />
               <span>{item.text}</span>
@@ -81,4 +101,3 @@ export default function Sidebar() {
     </aside>
   )
 }
-

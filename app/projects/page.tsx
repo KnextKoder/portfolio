@@ -13,33 +13,33 @@ interface Project {
 
 const projects: Project[] = [
   {
-    slug: "aceternity",
-    title: "Aceternity",
-    description: "A design and development studio that focuses on building quality apps.",
-    image: "/images/sidefolio-aceternity-2.png",
-    tags: ["Nextjs", "Tailwindcss"],
+    slug: "obin-labs",
+    title: "Obin Labs",
+    description: "A decentralized edge network for inferencing sharded LLMs.",
+    image: "/network.webp",
+    tags: ["Go", "Python", "Docker", "AWS"],
+  },  
+  {
+    slug: "wengine",
+    title: "Wengine",
+    description: "An advertising platform for whatsapp",
+    image: "/wengine1.png",
+    tags: ["Nextjs", "Typescript", "Tailwindcss", "Pi Network- SDK"],
   },
   {
-    slug: "algochurn",
-    title: "Algochurn",
-    description: "Practice for technical interviews with hands on coding challenges.",
-    image: "/images/sidefolio-algochurn.png",
-    tags: ["Nextjs", "Tailwindcss"],
+    slug: "inbox-ai",
+    title: "Inbox AI",
+    description: "A managed email and authentication client for agents to communicate and access restricted sites.",
+    image: "/inboxai1.png",
+    tags: ["Nextjs", "Tailwindcss", "Typescript", "AWS-SES", "Groq"],
   },
   {
-    slug: "moonbeam",
-    title: "Moonbeam",
-    description: "Never write from scratch again with Moonbeam, your AI first writing tool",
-    image: "/images/sidefolio-moonbeam.png",
-    tags: ["Nextjs", "Tailwindcss"],
-  },
-  {
-    slug: "tailwindmasterkit",
-    title: "Tailwind Master Kit",
+    slug: "groq-agents",
+    title: "Groq Agents",
     description:
-      "A beautiful and comprehensive Tailwind CSS components library for building modern websites and applications.",
-    image: "/images/sidefolio-tailwindmasterkit.png",
-    tags: ["Nextjs", "Tailwindcss"],
+      "A typescript SDK and framework for building autonomous AI agents that can self coordinate and self develop tools to complete a task.",
+    image: "/groqagents1.png",
+    tags: ["Typescript", "Groq", "Vercel-AI SDK", "Zod"],
   },
 ]
 
@@ -68,10 +68,10 @@ export default function Projects() {
               />
               <div className="flex flex-col justify-between">
                 <div>
-                  <h4 className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary font-black text-lg md:text-lg lg:text-lg">
+                  <h4 className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 font-black text-lg md:text-lg lg:text-lg">
                     {project.title}
                   </h4>
-                  <p className="font-normal text-secondary text-sm md:text-sm lg:text-sm mt-2 max-w-xl">
+                  <p className="font-normal text-primary text-sm md:text-sm lg:text-sm mt-2 max-w-xl">
                     {project.description}
                   </p>
                 </div>
@@ -80,7 +80,7 @@ export default function Projects() {
                     <Badge
                       key={tag}
                       variant="secondary"
-                      className="text-xs md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-secondary"
+                      className="text-xs md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-primary"
                     >
                       {tag}
                     </Badge>
