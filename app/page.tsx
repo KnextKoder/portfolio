@@ -167,10 +167,11 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 whileHover={{ y: -5 }}
+                className="h-full" // Added to ensure motion div takes full height
               >
                 <Link
                   href={`/projects/${project.slug}`}
-                  className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+                  className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 h-full flex flex-col" // Added h-full and flex-col
                 >
                   <div className="relative h-48 overflow-hidden">
                     <Image
@@ -182,14 +183,14 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   
-                  <div className="p-5">
+                  <div className="p-5 flex-grow flex flex-col"> {/* Added flex-grow and flex flex-col */}
                     <h3 className="font-bold text-xl mb-2 group-hover:text-primary transition-colors duration-300">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-grow"> {/* Changed to line-clamp-3 and added flex-grow */}
                       {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-2">
+                    <div className="flex flex-wrap gap-2 mt-auto"> {/* Added mt-auto to push tags to bottom */}
                       {project.tags.slice(0, 3).map((tag) => (
                         <Badge
                           key={tag}
