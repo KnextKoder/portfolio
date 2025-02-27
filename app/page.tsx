@@ -3,6 +3,8 @@ import Image from "next/image"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import Footer from "@/components/footer"
+import { ArrowUpRight } from "lucide-react"
+import { motion } from "framer-motion"
 
 interface Project {
   slug: string
@@ -16,15 +18,15 @@ const projects: Project[] = [
   {
     slug: "obin-labs",
     title: "Obin Labs",
-    description: "A decentralized edge network for inferencing sharded LLMs.",
-    image: "/network.webp",
-    tags: ["Go", "Python", "Docker", "AWS"],
+    description: "A decentralized network of devices for inferencing sharded LLMs.",
+    image: "/Obin Labs.svg",
+    tags: ["Pytorch","Go", "Python", "Docker", "AWS"],
   },  
   {
     slug: "wengine",
     title: "Wengine",
     description: "An advertising platform for whatsapp",
-    image: "/wengine1.png",
+    image: "/wengine.svg",
     tags: ["Nextjs", "Typescript", "Tailwindcss", "Pi Network- SDK"],
   },
   {
@@ -48,95 +50,274 @@ const techStack = [
   { name: "Typescript", logo: "/ts.svg", width: 96 },
   { name: "Python", logo: "/python.svg", width: 96 },
   { name: "Go", logo: "/golang.png", width: 96 },
-  { name: "Framer Motion", logo: "/framer.webp", width: 40 },
-  { name: "AWS", logo: "/aws.webp", width: 40 },
-  { name: "Figma", logo: "/figma.webp", width: 56 },
-  { name: "Node", logo: "/node.webp", width: 56 },
-  { name: "Tailwind", logo: "/tailwind.webp", width: 96 },
+  { name: "Framer Motion", logo: "/framer.webp", width: 96 },
+  { name: "AWS", logo: "/aws.webp", width: 96 },
+  { name: "Figma", logo: "/figma.webp", width: 96 },
+  { name: "Node", logo: "/node.webp", width: 200 },
+  { name: "Tailwind", logo: "/tailwind.webp", width: 200 },
   { name: "Groq", logo: "/groq.svg", width: 96 },
-  { name: "Docker", logo: "/docker.svg", width: 96 },
-  { name: "Next.js", logo: "/next.svg", width: 56 },
-  { name: "Vercel", logo: "/vercel.webp", width: 56 },
-  { name: "Upsatsh", logo: "/upstash.svg", width: 56 },
+  { name: "Docker", logo: "/docker.svg", width: 200 },
+  { name: "Next.js", logo: "/next.svg", width: 150 },
+  { name: "Vercel", logo: "/vercel.webp", width: 150 },
+  { name: "Upsatsh", logo: "/upstash.svg", width: 200 },
+  { name: "PyTorch", logo: "/PyTorch.svg", width: 200 },
 ]
 
 export default function Home() {
   return (
-    <main className="max-w-4xl w-full mx-auto py-20 px-4 md:px-10">
-      <span className="text-4xl">👋</span>
-      <h1 className="text-base md:text-xl lg:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/30 font-black">
-        Hello there! I&apos;m Marvel
-      </h1>
-      <p className="text-sm lg:text-base font-normal text-primary max-w-xl mt-4">
-        I&apos;m a full-stack developer that loves <span className="bg-neutral-200 px-1 py-0.5">building startups</span> and
-        <span className="bg-neutral-200 px-1 py-0.5">doing research</span> on cutting-edge technology that can impact millions of lives
-      </p>
-      <p className="text-sm lg:text-base font-normal text-primary max-w-xl mt-4">
-        I&apos;m a software engineer with <span className="bg-neutral-200 px-1 py-0.5">4 years of experience</span>{" "}
-        building scalable web apps and going from 0-1 on many personal projects.
-      </p>
+    <main className="w-full">
+      {/* Hero section */}
+      <section className="max-w-5xl mx-auto py-20 md:py-32 px-4 md:px-10">
+        <div className="flex flex-col items-start">
+          <motion.div 
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center mb-6 px-3 py-1 bg-primary/10 rounded-full text-primary text-sm font-medium"
+          >
+            <span className="animate-wave mr-2">👋</span> 
+            <span>Welcome to my portfolio</span>
+          </motion.div>
+          
+          <motion.h1 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight"
+          >
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
+              Hi! I&apos;m Marvel
+            </span>
+          </motion.h1>
+          
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.7, delay: 0.4 }}
+            className="space-y-4 text-gray-600 md:text-lg max-w-2xl mb-8"
+          >
+            <p>
+              I&apos;m a full-stack developer that loves <span className="bg-neutral-200 px-1.5 py-0.5 rounded-md font-medium">building startups</span> and{" "}
+              <span className="bg-neutral-200 px-1.5 py-0.5 rounded-md font-medium">doing research</span> on cutting-edge technology that can impact millions of lives.
+            </p>
+            <p>
+              With <span className="bg-neutral-200 px-1.5 py-0.5 rounded-md font-medium">4 years of experience</span>{" "}
+              building scalable web apps and going from 0-1 on many personal projects.
+            </p>
+          </motion.div>
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.6 }}
+            className="flex flex-wrap gap-3 mt-2"
+          >
+            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+              <Link 
+                href="/resume" 
+                className="px-5 py-2.5 rounded-lg bg-primary text-white font-medium hover:bg-primary/90 transition-colors"
+              >
+                View Resume
+              </Link>
+            </motion.div>
+            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+              <Link 
+                href="/projects" 
+                className="px-5 py-2.5 rounded-lg border border-gray-300 hover:border-gray-400 font-medium transition-colors"
+              >
+                Explore Projects
+              </Link>
+            </motion.div>
+          </motion.div>
+        </div>
+      </section>
+      
+      {/* Featured projects section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4 md:px-10">
+          <motion.div 
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center justify-between mb-10"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold">
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
+                Featured Projects
+              </span>
+            </h2>
+            <motion.div whileHover={{ x: 3 }} transition={{ duration: 0.2 }}>
+              <Link 
+                href="/projects" 
+                className="inline-flex items-center text-sm font-medium text-primary hover:underline"
+              >
+                View All Projects
+                <ArrowUpRight className="ml-1 w-4 h-4" />
+              </Link>
+            </motion.div>
+          </motion.div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {projects.slice(0, 2).map((project, index) => (
+              <motion.div
+                key={project.slug}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.2 }}
+                whileHover={{ y: -5 }}
+              >
+                <Link
+                  href={`/projects/${project.slug}`}
+                  className="group block bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300"
+                >
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={project.image || "/placeholder.svg"}
+                      alt={project.title}
+                      fill
+                      className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                  </div>
+                  
+                  <div className="p-5">
+                    <h3 className="font-bold text-xl mb-2 group-hover:text-primary transition-colors duration-300">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-2">
+                      {project.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {project.tags.slice(0, 3).map((tag) => (
+                        <Badge
+                          key={tag}
+                          variant="secondary"
+                          className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-0.5 rounded-md transition-colors"
+                        >
+                          {tag}
+                        </Badge>
+                      ))}
+                      {project.tags.length > 3 && (
+                        <Badge
+                          variant="secondary"
+                          className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-0.5 rounded-md transition-colors"
+                        >
+                          +{project.tags.length - 3}
+                        </Badge>
+                      )}
+                    </div>
+                  </div>
+                </Link>
+              </motion.div>
+            ))}
+          </div>
 
-      <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary font-black text-lg md:text-lg lg:text-lg mt-20 mb-4">
-        What I&apos;ve been working on
-      </h2>
-      <div>
-        <div className="grid grid-cols-1 gap-10">
-          {projects.map((project) => (
-            <Link
-              key={project.slug}
-              href={`/projects/${project.slug}`}
-              className="group flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 hover:bg-gray-50 rounded-2xl transition duration-200 pt-4"
+          <div className="mt-12">
+            <div className="grid grid-cols-1 gap-6">
+              {projects.slice(2, 4).map((project, index) => (
+                <motion.div
+                  key={project.slug}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: 0.3 + (index * 0.15) }}
+                  whileHover={{ y: -3 }}
+                >
+                  <Link
+                    href={`/projects/${project.slug}`}
+                    className="group flex flex-col md:flex-row gap-5 bg-white p-4 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
+                  >
+                    <div className="relative h-40 md:w-48 md:h-40 rounded-lg overflow-hidden flex-shrink-0">
+                      <Image
+                        src={project.image || "/placeholder.svg"}
+                        alt={project.title}
+                        fill
+                        className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    
+                    <div className="flex flex-col justify-between py-1">
+                      <div>
+                        <h3 className="font-bold text-lg md:text-xl mb-2 group-hover:text-primary transition-colors duration-300">
+                          {project.title}
+                        </h3>
+                        <p className="text-gray-600 text-sm mb-4">
+                          {project.description}
+                        </p>
+                      </div>
+                      <div className="flex flex-wrap gap-2">
+                        {project.tags.slice(0, 4).map((tag) => (
+                          <Badge
+                            key={tag}
+                            variant="secondary"
+                            className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-0.5 rounded-md transition-colors"
+                          >
+                            {tag}
+                          </Badge>
+                        ))}
+                        {project.tags.length > 4 && (
+                          <Badge
+                            variant="secondary"
+                            className="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-0.5 rounded-md transition-colors"
+                          >
+                            +{project.tags.length - 4}
+                          </Badge>
+                        )}
+                      </div>
+                    </div>
+                  </Link>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      {/* Tech stack section */}
+      <section className="py-20 max-w-5xl mx-auto px-4 md:px-10">
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="text-2xl md:text-3xl font-bold mb-10"
+        >
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
+            Tech Stack
+          </span>
+        </motion.h2>
+        
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+          {techStack.map((tech, index) => (
+            <motion.div 
+              key={tech.name}
+              initial={{ opacity: 0, scale: 0.8 }}
+              whileInView={{ opacity: 1, scale: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.05 * index }}
+              whileHover={{ y: -5, transition: { duration: 0.2 } }}
+              className="flex flex-col items-center justify-center p-4 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors duration-300 aspect-square"
             >
-              <Image
-                src={project.image || "/placeholder.svg"}
-                alt="thumbnail"
-                width={200}
-                height={200}
-                className="rounded-md"
-              />
-              <div className="flex flex-col justify-between">
-                <div>
-                  <h4 className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary font-black text-lg md:text-lg lg:text-lg">
-                    {project.title}
-                  </h4>
-                  <p className="font-normal text-primary text-sm md:text-sm lg:text-sm mt-2 max-w-xl">
-                    {project.description}
-                  </p>
-                </div>
-                <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0">
-                  {project.tags.map((tag) => (
-                    <Badge
-                      key={tag}
-                      variant="secondary"
-                      className="text-xs md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-primary"
-                    >
-                      {tag}
-                    </Badge>
-                  ))}
-                </div>
+              <div className="relative h-12 w-full flex items-center justify-center">
+                <Image
+                  src={tech.logo || "/placeholder.svg"}
+                  alt={tech.name}
+                  width={tech.width / 2}
+                  height={48}
+                  className="object-contain max-h-12"
+                />
               </div>
-            </Link>
+              <span className="mt-3 text-sm text-gray-600 font-medium text-center">
+                {tech.name}
+              </span>
+            </motion.div>
           ))}
         </div>
-      </div>
-
-      <h2 className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary font-black text-lg md:text-lg lg:text-lg mt-20 mb-4">
-        Tech Stack
-      </h2>
-      <div className="flex flex-wrap">
-        {techStack.map((tech) => (
-          <Image
-            key={tech.name}
-            src={tech.logo || "/placeholder.svg"}
-            alt={tech.name}
-            width={200}
-            height={200}
-            className={`object-contain m-2 h-10 w-${tech.width / 4}`}
-          />
-        ))}
-      </div>
+      </section>
+      
       <Footer />
     </main>
   )
 }
-

@@ -1,91 +1,256 @@
-import { Briefcase } from "lucide-react"
+"use client"
+import { Briefcase, ExternalLink } from "lucide-react"
+import Link from "next/link"
+import { motion } from "framer-motion"
 
-interface WorkExperience {
+interface Role {
   period: string
-  company: string
-  companyColor: string
-  role: string
-  focus: string
+  title: string
+  focus?: string
   achievements: string[]
+  isPromotion?: boolean
 }
 
-const experiences: WorkExperience[] = [
+interface Company {
+  name: string
+  color: string
+  roles: Role[]
+  link?: string
+}
+
+const companies: Company[] = [
   {
-    period: "2022 - Present",
-    company: "Amazon",
-    companyColor: "#008296",
-    role: "Senior Software Engineer",
-    focus: "Building the future of e-commerce",
-    achievements: [
-      "Developed a new feature that improves the shopping experience",
-      "Implemented a recommendation algorithm to suggest products",
-      "Enhanced the checkout process making it more intuitive and user-friendly",
-      "Built a feature for tracking packages in real-time",
+    name: "Obin Labs",
+    color: "#000000",
+    roles: [
+      {
+        period: "Feb 2025 - Present",
+        title: "Co-Founder",
+        focus: "Building a decentralized datacenter powered by humans",
+        achievements: [
+          "Developed a new feature that improves the shopping experience",
+          "Implemented a recommendation algorithm to suggest products",
+          "Enhanced the checkout process making it more intuitive and user-friendly",
+          "Built a feature for tracking packages in real-time",
+        ],
+      },
     ],
   },
   {
-    period: "2021 - 2022",
-    company: "Google",
-    companyColor: "#34A853",
-    role: "Senior Software Engineer",
-    focus: "Building the future of search",
-    achievements: [
-      "Improved the search algorithm to provide more relevant results",
-      "Developed a new feature that personalizes search results",
-      "Enhanced the search functionality making it more intuitive and user-friendly",
-      "Implemented a feature for tracking search history",
+    name: "Rubix Class",
+    color: "#008296",
+    roles: [
+      {
+        period: "May 2024 - Dec 2024",
+        title: "Co-Founder",
+        focus: "Building the future of AI x Education-Technology",
+        achievements: [
+          "Developed a new feature that improves the shopping experience",
+          "Implemented a recommendation algorithm to suggest products",
+          "Enhanced the checkout process making it more intuitive and user-friendly",
+          "Built a feature for tracking packages in real-time",
+        ],
+      },
     ],
+    link: "https://rubixclass.com/",
   },
   {
-    period: "2020 - 2021",
-    company: "Facebook",
-    companyColor: "#0866FF",
-    role: "Senior Software Engineer",
-    focus: "Building the future of social networking",
-    achievements: [
-      "Developed a new feature that improves the user experience",
-      "Implemented a recommendation algorithm to suggest friends",
-      "Enhanced the news feed algorithm to show more relevant posts",
-      "Built a feature for tracking user activity",
+    name: "AI-Plans",
+    color: "#008296",
+    roles: [
+      {
+        period: "Aug 2023 - Apr 2024",
+        title: "Full Stack Developer",
+        focus: "Measuring the effectiveness of State-Of-The-Art AI Alignment research",
+        achievements: [
+          "Developed a new feature that improves the shopping experience",
+          "Implemented a recommendation algorithm to suggest products",
+          "Enhanced the checkout process making it more intuitive and user-friendly",
+          "Built a feature for tracking packages in real-time",
+        ],
+      },
     ],
+    link: "https://ai-plans.com/",
+  },
+  {
+    name: "Terra Hq",
+    color: "#34A853",
+    roles: [
+      {
+        period: "Dec 2022 - Jul 2023",
+        title: "Software Engineer",
+        focus: "Building the future of search",
+        achievements: [
+          "Improved the search algorithm to provide more relevant results",
+          "Developed a new feature that personalizes search results",
+          "Enhanced the search functionality making it more intuitive and user-friendly",
+          "Implemented a feature for tracking search history",
+        ],
+      },
+      {
+        period: "Jan 2021 - Nov 2022",
+        title: "Junior Frontend Developer",
+        focus: "Building the future of social networking",
+        isPromotion: true,
+        achievements: [
+          "Developed a new feature that improves the user experience",
+          "Implemented a recommendation algorithm to suggest friends",
+          "Enhanced the news feed algorithm to show more relevant posts",
+          "Built a feature for tracking user activity",
+        ],
+      },
+    ],
+    link: "https://lms.terrahq.co/",
   },
 ]
 
 export default function Resume() {
   return (
-    <main className="max-w-4xl w-full mx-auto py-20 px-4 md:px-10">
-      <div className="flex items-center gap-3 mb-8">
-        <Briefcase className="w-8 h-8" />
-        <h1 className="text-4xl font-bold">Work History</h1>
-      </div>
+    <main className="max-w-5xl w-full mx-auto py-24 px-4 md:px-10">
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="flex flex-col items-center text-center mb-16"
+      >
+        <motion.div 
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="bg-gradient-to-r from-blue-600 to-indigo-600 p-4 rounded-full mb-6 text-white"
+        >
+          <Briefcase className="w-10 h-10" />
+        </motion.div>
+        <motion.h1 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="text-5xl font-bold mb-4"
+        >
+          Work History
+        </motion.h1>
+        <motion.p 
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="text-gray-600 max-w-2xl text-lg"
+        >
+          I&apos;m a full-stack developer that loves building products and web apps that can impact millions of lives
+        </motion.p>
+      </motion.div>
 
-      <p className="text-gray-600 mb-12">
-        I&apos;m a full-stack developer that loves building products and web apps that can impact millions of lives
-      </p>
+      <div className="relative">
+        {/* Timeline line with animation */}
+        <motion.div 
+          initial={{ height: 0 }}
+          animate={{ height: "100%" }}
+          transition={{ duration: 1.2, delay: 0.5 }}
+          className="absolute left-0 md:left-1/2 w-px bg-gray-200 transform -translate-x-1/2"
+        ></motion.div>
 
-      <div className="space-y-16">
-        {experiences.map((exp) => (
-          <div key={exp.company} className="grid grid-cols-[1fr,3fr] gap-8">
-            <div className="text-gray-500">{exp.period}</div>
-            <div>
-              <h3 className="text-xl font-semibold mb-1" style={{ color: exp.companyColor }}>
-                {exp.company}
-              </h3>
-              <h4 className="text-lg font-medium mb-1">{exp.role}</h4>
-              <p className="text-gray-600 mb-4">{exp.focus}</p>
-              <ul className="space-y-2">
-                {exp.achievements.map((achievement, index) => (
-                  <li key={index} className="flex items-start">
-                    <span className="mr-2 mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-gray-300" />
-                    <span className="text-gray-600">{achievement}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          </div>
-        ))}
+        <div className="space-y-12">
+          {companies.map((company, companyIndex) => (
+            <motion.div 
+              key={company.name} 
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.6, delay: 0.2 + (companyIndex * 0.1) }}
+              className="relative"
+            >
+              {/* Company timeline dot */}
+              <motion.div 
+                initial={{ scale: 0, opacity: 0 }}
+                animate={{ scale: 1, opacity: 1 }}
+                transition={{ duration: 0.5, delay: 0.5 + (companyIndex * 0.1) }}
+                className="absolute left-0 md:left-1/2 w-5 h-5 rounded-full border-4 border-white shadow-md transform -translate-x-1/2" 
+                style={{ backgroundColor: company.color }}
+              ></motion.div>
+              
+              <div className="grid md:grid-cols-2 gap-8 relative">
+                {/* Company name section */}
+                <motion.div 
+                  initial={{ opacity: 0, x: companyIndex % 2 === 0 ? 50 : -50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.3 + (companyIndex * 0.1) }}
+                  className={`${companyIndex % 2 === 0 ? 'md:text-right md:pr-12' : 'md:order-2 md:pl-12'} mb-6 md:mb-0`}
+                >
+                  <div className="bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all border border-gray-100">
+                    <h2 className="text-2xl font-bold mb-2" style={{ color: company.color }}>
+                      {company.name}
+                    </h2>
+                    
+                    {company.link && (
+                      <Link 
+                        href={company.link} 
+                        target="_blank"
+                        className="inline-flex items-center text-sm text-gray-500 hover:text-gray-700 transition-colors mb-2"
+                      >
+                        Visit website <ExternalLink className="ml-1 w-3 h-3" />
+                      </Link>
+                    )}
+                  </div>
+                </motion.div>
+
+                {/* Roles section */}
+                <motion.div 
+                  initial={{ opacity: 0, x: companyIndex % 2 === 0 ? -50 : 50 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.5, delay: 0.4 + (companyIndex * 0.1) }}
+                  className={`${companyIndex % 2 === 0 ? 'md:order-2 md:pl-12' : 'md:pr-12'}`}
+                >
+                  <div className="space-y-6">
+                    {company.roles.map((role, roleIndex) => (
+                      <motion.div 
+                        key={roleIndex}
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.4, delay: 0.5 + (companyIndex * 0.1) + (roleIndex * 0.1) }}
+                        className={`bg-white rounded-xl p-6 shadow-lg hover:shadow-xl transition-all border ${
+                          roleIndex > 0 ? 'border-l-4' : 'border'
+                        }`}
+                        style={{ borderLeftColor: roleIndex > 0 ? company.color : '' }}
+                      >
+                        <div className="flex items-center justify-between mb-4">
+                          <h3 className="text-xl font-semibold">{role.title}</h3>
+                          <span className="text-sm font-medium px-3 py-1 bg-gray-100 rounded-full">
+                            {role.period}
+                          </span>
+                        </div>
+                        
+                        {roleIndex > 0 && (
+                          <div className="inline-block mb-3 px-3 py-1 bg-gradient-to-r from-green-50 to-green-100 text-green-700 text-xs font-medium rounded-full">
+                            Promotion
+                          </div>
+                        )}
+                        
+                        {role.focus && <p className="text-gray-600 mb-4">{role.focus}</p>}
+                        
+                        <ul className="space-y-3">
+                          {role.achievements.map((achievement, index) => (
+                            <motion.li 
+                              key={index}
+                              initial={{ opacity: 0, x: -10 }}
+                              animate={{ opacity: 1, x: 0 }}
+                              transition={{ duration: 0.3, delay: 0.6 + (companyIndex * 0.1) + (roleIndex * 0.1) + (index * 0.05) }}
+                              className="flex items-start group"
+                            >
+                              <span 
+                                className="mr-3 mt-1.5 h-2 w-2 flex-shrink-0 rounded-full bg-gray-300 group-hover:bg-blue-500 transition-colors"
+                                style={{ backgroundColor: company.color + '80' }}
+                              />
+                              <span className="text-gray-600">{achievement}</span>
+                            </motion.li>
+                          ))}
+                        </ul>
+                      </motion.div>
+                    ))}
+                  </div>
+                </motion.div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </div>
     </main>
   )
 }
-

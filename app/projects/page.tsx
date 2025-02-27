@@ -1,7 +1,10 @@
+"use client"
 import Image from "next/image"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import Footer from "@/components/footer"
+import { ArrowUpRight } from "lucide-react"
+import { motion } from "framer-motion"
 
 interface Project {
   slug: string
@@ -15,15 +18,15 @@ const projects: Project[] = [
   {
     slug: "obin-labs",
     title: "Obin Labs",
-    description: "A decentralized edge network for inferencing sharded LLMs.",
-    image: "/network.webp",
-    tags: ["Go", "Python", "Docker", "AWS"],
+    description: "A decentralized network of devices for inferencing sharded LLMs.",
+    image: "/Obin Labs.svg",
+    tags: ["Pytorch","Go", "Python", "Docker", "AWS"],
   },  
   {
     slug: "wengine",
     title: "Wengine",
     description: "An advertising platform for whatsapp",
-    image: "/wengine1.png",
+    image: "/wengine.svg",
     tags: ["Nextjs", "Typescript", "Tailwindcss", "Pi Network- SDK"],
   },
   {
@@ -44,56 +47,162 @@ const projects: Project[] = [
 ]
 
 export default function Projects() {
-  return (
-    <main className="max-w-4xl w-full mx-auto py-20 px-4 md:px-10">
-      <span className="text-4xl">⚡</span>
-      <h1 className="text-base md:text-xl lg:text-4xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary font-black mb-10">
-        What I&apos;ve been working on
-      </h1>
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    visible: { 
+      opacity: 1,
+      transition: { 
+        staggerChildren: 0.1,
+        delayChildren: 0.3
+      }
+    }
+  }
+  
+  const itemVariants = {
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 }
+  }
 
-      <div>
-        <div className="grid grid-cols-1 gap-10">
-          {projects.map((project) => (
+  return (
+    <motion.main 
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      className="max-w-6xl w-full mx-auto py-24 px-4 md:px-10"
+    >
+      {/* Modern header section */}
+      <motion.div 
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="mb-16"
+      >
+        <div className="flex items-center gap-3 mb-4">
+          <motion.span 
+            animate={{ 
+              scale: [0.9, 1.1, 0.9],
+              opacity: [0.7, 1, 0.7]
+            }} 
+            transition={{ 
+              repeat: Infinity, 
+              duration: 2,
+              repeatType: "loop" 
+            }}
+            className="text-4xl"
+          >
+            ⚡
+          </motion.span>
+          <motion.div 
+            initial={{ scaleX: 0 }}
+            animate={{ scaleX: 1 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+            className="h-px flex-grow bg-gradient-to-r from-primary/50 to-transparent"
+          ></motion.div>
+        </div>
+        <motion.h1 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+          className="text-3xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary font-black"
+        >
+          My Projects
+        </motion.h1>
+        <motion.p 
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.3 }}
+          className="mt-4 text-lg text-gray-600 max-w-2xl"
+        >
+          Building innovative solutions through code. Here&apos;s what I&apos;ve been working on.
+        </motion.p>
+      </motion.div>
+
+      {/* Modern grid layout */}
+      <motion.div 
+        variants={containerVariants}
+        initial="hidden"
+        animate="visible"
+        className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16"
+      >
+        {projects.map((project, index) => (
+          <motion.div
+            key={project.slug}
+            variants={itemVariants}
+            whileHover={{ y: -5 }}
+            transition={{ duration: 0.3 }}
+          >
             <Link
-              key={project.slug}
               href={`/projects/${project.slug}`}
-              className="group flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 hover:bg-gray-50 rounded-2xl transition duration-200 pt-4"
+              className="group relative flex flex-col bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 h-full"
             >
-              <Image
-                src={project.image || "/placeholder.svg"}
-                alt="thumbnail"
-                width={200}
-                height={200}
-                className="rounded-md"
-              />
-              <div className="flex flex-col justify-between">
+              {/* Project Image with overlay */}
+              <div className="relative h-48 w-full overflow-hidden">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
+                <Image
+                  src={project.image || "/placeholder.svg"}
+                  alt={project.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+                <motion.div 
+                  className="absolute top-4 right-4 z-20"
+                  whileHover={{ rotate: 45 }}
+                  transition={{ type: "spring", stiffness: 300 }}
+                >
+                  <div className="p-2 rounded-full bg-white/90 backdrop-blur-sm shadow-md transform transition-transform duration-300 group-hover:rotate-12">
+                    <ArrowUpRight className="w-5 h-5 text-primary" />
+                  </div>
+                </motion.div>
+              </div>
+              
+              {/* Content */}
+              <div className="flex flex-col justify-between flex-grow p-6">
                 <div>
-                  <h4 className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 font-black text-lg md:text-lg lg:text-lg">
+                  <h4 className="font-bold text-2xl mb-2 text-gray-800 group-hover:text-primary transition-colors duration-300">
                     {project.title}
                   </h4>
-                  <p className="font-normal text-primary text-sm md:text-sm lg:text-sm mt-2 max-w-xl">
+                  <p className="text-gray-600 mb-4">
                     {project.description}
                   </p>
                 </div>
-                <div className="flex space-x-2 md:mb-1 mt-2 md:mt-0">
-                  {project.tags.map((tag) => (
-                    <Badge
+                
+                {/* Tags */}
+                <motion.div 
+                  className="flex flex-wrap gap-2 mt-4"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.5 + index * 0.1 }}
+                >
+                  {project.tags.map((tag, i) => (
+                    <motion.div
                       key={tag}
-                      variant="secondary"
-                      className="text-xs md:text-xs lg:text-xs bg-gray-50 px-2 py-1 rounded-sm text-primary"
+                      initial={{ opacity: 0, y: 10 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ delay: 0.6 + i * 0.05 + index * 0.1 }}
                     >
-                      {tag}
-                    </Badge>
+                      <Badge
+                        variant="secondary"
+                        className="text-xs font-medium bg-gray-100 hover:bg-gray-200 text-gray-700 px-2.5 py-1 rounded-md transition-colors"
+                      >
+                        {tag}
+                      </Badge>
+                    </motion.div>
                   ))}
-                </div>
+                </motion.div>
               </div>
+              
+              {/* Bottom accent line */}
+              <motion.div 
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 0.8 }}
+                className="h-1.5 w-full bg-gradient-to-r from-primary to-secondary origin-left"
+              ></motion.div>
             </Link>
-          ))}
-        </div>
-      </div>
+          </motion.div>
+        ))}
+      </motion.div>
 
       <Footer />
-    </main>
+    </motion.main>
   )
 }
-
