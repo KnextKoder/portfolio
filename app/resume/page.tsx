@@ -20,87 +20,88 @@ interface Company {
 
 const companies: Company[] = [
   {
-    name: "Obin Labs",
-    color: "#000000",
+    name: "Pickvibes",
+    color: "#8A2BE2", // Purple color for community focus
     roles: [
       {
-        period: "Feb 2025 - Present",
-        title: "Co-Founder",
-        focus: "Building a decentralized datacenter powered by humans",
+        period: "Jan 2024 - Present",
+        title: "Head of Community",
+        focus: "Leading community growth and engagement strategies for Web3 projects",
         achievements: [
-          "Developed a new feature that improves the shopping experience",
-          "Implemented a recommendation algorithm to suggest products",
-          "Enhanced the checkout process making it more intuitive and user-friendly",
-          "Built a feature for tracking packages in real-time",
+          "Scaled Telegram community from 100 to 1000 members in 2 months",
+          "Implemented engagement tactics that increased daily active users by 40%",
+          "Developed content strategy resulting in 300% increase in social media engagement",
+          "Established ambassador program with 25+ active community advocates"
         ],
       },
     ],
+    link: "https://pickvibes.com/",
   },
   {
-    name: "Rubix Class",
-    color: "#008296",
+    name: "Meme Token Collective",
+    color: "#FF6B6B", // Pinkish color for meme token theme
     roles: [
       {
-        period: "May 2024 - Dec 2024",
-        title: "Co-Founder",
-        focus: "Building the future of AI x Education-Technology",
+        period: "May 2023 - Dec 2023",
+        title: "Community Manager",
+        focus: "Managing investor relations and community engagement for token projects",
         achievements: [
-          "Developed a new feature that improves the shopping experience",
-          "Implemented a recommendation algorithm to suggest products",
-          "Enhanced the checkout process making it more intuitive and user-friendly",
-          "Built a feature for tracking packages in real-time",
+          "Successfully onboarded 500+ new investors through community initiatives",
+          "Organized weekly AMAs with project founders increasing investor confidence",
+          "Created educational content explaining tokenomics to non-technical audience",
+          "Moderated Discord server with 5,000+ members ensuring quality discussions"
         ],
       },
     ],
-    link: "https://rubixclass.com/",
+    link: "https://memetoken.collective/",
   },
   {
-    name: "AI-Plans",
-    color: "#008296",
+    name: "O'sea Pirates NFT",
+    color: "#4EA8DE", // Blue color for NFT/ocean theme
     roles: [
       {
-        period: "Aug 2023 - Apr 2024",
-        title: "Full Stack Developer",
-        focus: "Measuring the effectiveness of State-Of-The-Art AI Alignment research",
+        period: "Aug 2022 - Apr 2023",
+        title: "Community Lead",
+        focus: "Building and nurturing NFT community through engagement and governance",
         achievements: [
-          "Developed a new feature that improves the shopping experience",
-          "Implemented a recommendation algorithm to suggest products",
-          "Enhanced the checkout process making it more intuitive and user-friendly",
-          "Built a feature for tracking packages in real-time",
+          "Established community guidelines and moderation protocols",
+          "Created engagement programs that increased holder retention by 35%",
+          "Implemented governance structure for community-driven project decisions",
+          "Organized virtual events averaging 200+ attendees per session"
         ],
       },
     ],
-    link: "https://ai-plans.com/",
+    link: "https://osea-pirates.io/",
   },
   {
-    name: "Terra Hq",
-    color: "#34A853",
+    name: "Solana Foundation",
+    color: "#14F195", // Solana green
     roles: [
       {
-        period: "Dec 2022 - Jul 2023",
-        title: "Software Engineer",
-        focus: "Building the future of search",
+        period: "Mar 2021 - Jul 2022",
+        title: "Web3 Community Specialist",
+        focus: "Organizing educational events and onboarding programs for blockchain adoption",
         achievements: [
-          "Improved the search algorithm to provide more relevant results",
-          "Developed a new feature that personalizes search results",
-          "Enhanced the search functionality making it more intuitive and user-friendly",
-          "Implemented a feature for tracking search history",
+          "Onboarded 500+ new Web3 enthusiasts through organized events and workshops",
+          "Collaborated with Solana all-stars to create educational content",
+          "Facilitated 20+ in-person and virtual meetups across multiple regions",
+          "Developed beginner-friendly guides for wallet setup and DApp interaction"
         ],
       },
       {
-        period: "Jan 2021 - Nov 2022",
-        title: "Junior Frontend Developer",
-        focus: "Building the future of social networking",
+        period: "Jan 2020 - Feb 2021",
+        title: "Community Moderator",
+        focus: "Managing online communities and providing front-line support",
         isPromotion: true,
         achievements: [
-          "Developed a new feature that improves the user experience",
-          "Implemented a recommendation algorithm to suggest friends",
-          "Enhanced the news feed algorithm to show more relevant posts",
-          "Built a feature for tracking user activity",
+          "Moderated Discord and Telegram channels with 10,000+ combined members",
+          "Resolved user queries and technical issues, maintaining 95% satisfaction rate",
+          "Contributed to community growth strategies resulting in 200% member increase",
+          "Created weekly community highlights newsletter with 30% open rate"
         ],
       },
     ],
-    link: "https://lms.terrahq.co/",
+    link: "https://solana.com/",
   },
 ]
 
@@ -135,7 +136,7 @@ export default function Resume() {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="text-gray-600 max-w-2xl text-lg"
         >
-          I&apos;m a full-stack developer that loves building products and web apps that can impact millions of lives
+          I&apos;m a Web3 Community Lead with 5 years of experience building engaged communities and driving adoption in the decentralized space
         </motion.p>
       </motion.div>
 
@@ -217,7 +218,7 @@ export default function Resume() {
                           </span>
                         </div>
                         
-                        {roleIndex > 0 && (
+                        {role.isPromotion && (
                           <div className="inline-block mb-3 px-3 py-1 bg-gradient-to-r from-green-50 to-green-100 text-green-700 text-xs font-medium rounded-full">
                             Promotion
                           </div>

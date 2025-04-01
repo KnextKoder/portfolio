@@ -1,10 +1,10 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import { ExternalLink, BookOpen } from "lucide-react"
+import { ExternalLink, Users, Shield, MessageSquare } from "lucide-react"
 import { motion } from "framer-motion"
 
-interface ResearchTopic {
+interface CommunityInitiative {
   title: string
   description: string
   image: string
@@ -14,38 +14,38 @@ interface ResearchTopic {
   }>
 }
 
-const researchTopics: ResearchTopic[] = [
+const communityInitiatives: CommunityInitiative[] = [
   {
-    title: "Inferencing Distributed Models",
-    description: "Exploring decentralized networks for inferencing large language models.",
-    image: "/petals.png",
+    title: "Community Growth Programs",
+    description: "Strategic initiatives that helped scale Web3 communities from hundreds to thousands of active members through engagement tactics and incentive structures.",
+    image: "/community-growth.jpg",
     links: [
-      { title: "arXiv", url: "https://arxiv.org/pdf/2209.01188" },
-      { title: "Petals", url: "https://petals.dev/" },
-      { title: "GitHub - Petals", url: "https://github.com/bigscience-workshop/petals?tab=readme-ov-file" },
+      { title: "Telegram Group", url: "https://t.me/pickvibes" },
+      { title: "Discord Server", url: "https://discord.gg/web3community" },
+      { title: "Twitter", url: "https://twitter.com/web3community" },
     ],
   },
   {
-    title: "Directed Acyclic Graphs as a Consensus Mechanism",
-    description: "Investigating the use of DAGs in blockchain technology and their potential for scalability.",
-    image: "/dags.png",
+    title: "Web3 Onboarding & Education",
+    description: "Educational frameworks designed to help newcomers understand blockchain technology, navigate wallets, and participate in decentralized ecosystems.",
+    image: "/web3-education.jpg",
     links: [
-      { title: "Wikipedia", url: "https://en.wikipedia.org/wiki/Directed_acyclic_graph" },
-      { title: "GitHub - MedicalTorch", url: "https://github.com/perone/medicaltorch" },
+      { title: "Onboarding Guide", url: "https://web3community.guide" },
+      { title: "Workshop Series", url: "https://youtube.com/web3workshops" },
     ],
   },
   {
-    title: "Sharding Large Language Models",
-    description: "Researching techniques for sharding and distributing large language models.",
-    image: "/edgeshard.png",
+    title: "Governance & DAO Structures",
+    description: "Establishing effective community governance models that empower members while maintaining alignment with project goals and vision.",
+    image: "/dao-governance.jpg",
     links: [
-      { title: "arXiv", url: "https://arxiv.org/pdf/2405.14371" },
-      { title: "GitHub - MLX Sharding", url: "https://github.com/mzbac/mlx_sharding" },
+      { title: "Governance Framework", url: "https://notion.so/governance" },
+      { title: "Case Study", url: "https://medium.com/web3-governance" },
     ],
   },
 ]
 
-export default function Research() {
+export default function Community() {
   return (
     <motion.main 
       initial={{ opacity: 0 }}
@@ -72,7 +72,7 @@ export default function Research() {
             }}
             className="text-4xl"
           >
-            🔬
+            🧑‍🤝‍🧑
           </motion.span>
           <motion.div 
             initial={{ scaleX: 0 }}
@@ -87,7 +87,7 @@ export default function Research() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-3xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/50 font-black"
         >
-          My Research Interests
+          Community Building
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
@@ -95,12 +95,12 @@ export default function Research() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mt-4 text-lg text-gray-600 max-w-2xl"
         >
-          Exploring some of the cutting-edge technologies I&apos;m actively studying and researching.
+          Creating vibrant, engaged Web3 communities through strategic growth, education, and governance models.
         </motion.p>
       </motion.div>
 
       <div className="space-y-16">
-        {researchTopics.map((topic, index) => (
+        {communityInitiatives.map((initiative, index) => (
           <motion.div 
             key={index}
             initial={{ opacity: 0, y: 50 }}
@@ -114,8 +114,8 @@ export default function Research() {
               <div className="lg:w-2/5 relative">
                 <div className="absolute inset-0 bg-gradient-to-r from-black/30 to-transparent z-10 lg:hidden"></div>
                 <Image
-                  src={topic.image || "/placeholder.svg"}
-                  alt={topic.title}
+                  src={initiative.image || "/placeholder.svg"}
+                  alt={initiative.title}
                   width={600}
                   height={400}
                   className="object-cover w-full h-64 lg:h-full group-hover:scale-105 transition-transform duration-500"
@@ -128,7 +128,13 @@ export default function Research() {
                   transition={{ duration: 0.5, delay: index * 0.1 + 0.6 }}
                   className="absolute top-4 left-4 p-2 rounded-full bg-white/80 backdrop-blur-sm shadow-md z-20 lg:hidden"
                 >
-                  <BookOpen className="w-5 h-5 text-primary" />
+                  {index === 0 ? (
+                    <Users className="w-5 h-5 text-primary" />
+                  ) : index === 1 ? (
+                    <MessageSquare className="w-5 h-5 text-primary" />
+                  ) : (
+                    <Shield className="w-5 h-5 text-primary" />
+                  )}
                 </motion.div>
               </div>
               
@@ -141,7 +147,7 @@ export default function Research() {
                     transition={{ duration: 0.5, delay: index * 0.1 + 0.5 }}
                     className="text-2xl lg:text-3xl font-bold mb-3 group-hover:text-primary transition-colors duration-300"
                   >
-                    {topic.title}
+                    {initiative.title}
                   </motion.h2>
                   <motion.p 
                     initial={{ opacity: 0 }}
@@ -149,7 +155,7 @@ export default function Research() {
                     transition={{ duration: 0.5, delay: index * 0.1 + 0.6 }}
                     className="text-gray-600 mb-6 lg:text-lg"
                   >
-                    {topic.description}
+                    {initiative.description}
                   </motion.p>
                 </div>
                 
@@ -159,7 +165,7 @@ export default function Research() {
                   transition={{ duration: 0.5, delay: index * 0.1 + 0.7 }}
                   className="flex flex-wrap gap-2 mt-4"
                 >
-                  {topic.links.map((link, linkIndex) => (
+                  {initiative.links.map((link, linkIndex) => (
                     <motion.div
                       key={linkIndex}
                       whileHover={{ scale: 1.05, y: -2 }}
@@ -199,6 +205,54 @@ export default function Research() {
             ></motion.div>
           </motion.div>
         ))}
+
+        {/* Community Metrics Section */}
+        <motion.div 
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.7 }}
+          className="bg-white border border-gray-200 rounded-2xl p-8 shadow-sm"
+        >
+          <h2 className="text-2xl lg:text-3xl font-bold mb-8 text-gray-800">Community Impact</h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <motion.div 
+              whileHover={{ y: -5 }}
+              className="bg-gray-50 p-6 rounded-xl border border-gray-100"
+            >
+              <p className="text-sm text-gray-500 mb-1">Total Members</p>
+              <p className="text-3xl font-bold text-primary">10,000+</p>
+              <p className="text-sm text-gray-600 mt-2">Across multiple Web3 communities</p>
+            </motion.div>
+            
+            <motion.div 
+              whileHover={{ y: -5 }}
+              className="bg-gray-50 p-6 rounded-xl border border-gray-100"
+            >
+              <p className="text-sm text-gray-500 mb-1">Events Hosted</p>
+              <p className="text-3xl font-bold text-primary">50+</p>
+              <p className="text-sm text-gray-600 mt-2">AMAs, Twitter Spaces, workshops</p>
+            </motion.div>
+            
+            <motion.div 
+              whileHover={{ y: -5 }}
+              className="bg-gray-50 p-6 rounded-xl border border-gray-100"
+            >
+              <p className="text-sm text-gray-500 mb-1">New Users Onboarded</p>
+              <p className="text-3xl font-bold text-primary">5,000+</p>
+              <p className="text-sm text-gray-600 mt-2">First-time Web3 participants</p>
+            </motion.div>
+            
+            <motion.div 
+              whileHover={{ y: -5 }}
+              className="bg-gray-50 p-6 rounded-xl border border-gray-100"
+            >
+              <p className="text-sm text-gray-500 mb-1">Ambassador Programs</p>
+              <p className="text-3xl font-bold text-primary">12</p>
+              <p className="text-sm text-gray-600 mt-2">Established and managed</p>
+            </motion.div>
+          </div>
+        </motion.div>
       </div>
     </motion.main>
   )

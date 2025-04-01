@@ -16,51 +16,48 @@ interface Project {
 
 const projects: Project[] = [
   {
-    slug: "obin-labs",
-    title: "Obin Labs",
-    description: "A decentralized network of devices for inferencing sharded LLMs.",
-    image: "/Obin Labs.svg",
-    tags: ["Pytorch","Go", "Python", "Docker", "AWS"],
+    slug: "pickvibes",
+    title: "Pickvibes Community Growth",
+    description: "Led growth strategies for the Pickvibes community, implementing engagement tactics and content strategies.",
+    image: "/community-growth.jpg",
+    tags: ["Community Growth", "Telegram", "Content Strategy"],
   },  
   {
-    slug: "wengine",
-    title: "Wengine",
-    description: "An advertising platform for whatsapp",
-    image: "/wengine.svg",
-    tags: ["Nextjs", "Typescript", "Tailwindcss", "Pi Network- SDK"],
+    slug: "meme-token",
+    title: "Meme Token Investor Community",
+    description: "Managed investor relations and community engagement for a popular meme token project.",
+    image: "/investor-community.jpg",
+    tags: ["Investor Relations", "Token Community", "Discord Management"],
   },
   {
-    slug: "inbox-ai",
-    title: "Inbox AI",
-    description: "A managed email and authentication client for agents to communicate and access restricted sites.",
-    image: "/inboxai1.png",
-    tags: ["Nextjs", "Tailwindcss", "Typescript", "AWS-SES", "Groq"],
+    slug: "osea-pirates",
+    title: "O'sea Pirate Community",
+    description: "Effectively managed the O'sea pirate community, creating engagement opportunities and governance structure.",
+    image: "/osea-community.jpg",
+    tags: ["Community Management", "NFT Community", "Governance"],
   },
   {
-    slug: "groq-agents",
-    title: "Groq Agents",
-    description:
-      "A typescript SDK and framework for building autonomous AI agents that can self coordinate and self develop tools to complete a task.",
-    image: "/groqagents1.png",
-    tags: ["Typescript", "Groq", "Vercel-AI SDK", "Zod"],
+    slug: "solana-events",
+    title: "Solana Web3 Events",
+    description: "Organized and facilitated Web3 onboarding events in collaboration with Solana all-stars.",
+    image: "/web3-events.jpg",
+    tags: ["Event Planning", "Solana", "Web3 Education"],
   },
 ]
 
 const techStack = [
-  { name: "Typescript", logo: "/ts.svg", width: 96 },
-  { name: "Python", logo: "/python.svg", width: 96 },
-  { name: "Go", logo: "/golang.png", width: 96 },
-  { name: "Framer Motion", logo: "/framer.webp", width: 96 },
-  { name: "AWS", logo: "/aws.webp", width: 96 },
+  { name: "Discord", logo: "/discord.svg", width: 120 },
+  { name: "Telegram", logo: "/telegram.svg", width: 120 },
+  { name: "Twitter", logo: "/twitter.svg", width: 120 },
+  { name: "Notion", logo: "/notion.svg", width: 120 },
+  { name: "Snapshot", logo: "/snapshot.svg", width: 120 },
   { name: "Figma", logo: "/figma.webp", width: 96 },
-  { name: "Node", logo: "/node.webp", width: 200 },
-  { name: "Tailwind", logo: "/tailwind.webp", width: 200 },
-  { name: "Groq", logo: "/groq.svg", width: 96 },
-  { name: "Docker", logo: "/docker.svg", width: 200 },
-  { name: "Next.js", logo: "/next.svg", width: 150 },
-  { name: "Vercel", logo: "/vercel.webp", width: 150 },
-  { name: "Upsatsh", logo: "/upstash.svg", width: 200 },
-  { name: "PyTorch", logo: "/PyTorch.svg", width: 200 },
+  { name: "NFT Tools", logo: "/nft.svg", width: 120 },
+  { name: "DAO Tools", logo: "/dao.svg", width: 120 },
+  { name: "OpenSea", logo: "/opensea.svg", width: 120 },
+  { name: "Arweave", logo: "/arweave.svg", width: 120 },
+  { name: "Ethereum", logo: "/ethereum.svg", width: 120 },
+  { name: "Solana", logo: "/solana.svg", width: 120 },
 ]
 
 export default function Home() {
@@ -86,7 +83,7 @@ export default function Home() {
             className="text-4xl md:text-5xl lg:text-6xl font-black mb-6 tracking-tight"
           >
             <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
-              Hi! I&apos;m Marvel
+              Hello, I&apos;m Newton
             </span>
           </motion.h1>
           
@@ -97,12 +94,12 @@ export default function Home() {
             className="space-y-4 text-gray-600 md:text-lg max-w-2xl mb-8"
           >
             <p>
-              I&apos;m a full-stack developer that loves <span className="bg-neutral-200 px-1.5 py-0.5 rounded-md font-medium">building startups</span> and{" "}
-              <span className="bg-neutral-200 px-1.5 py-0.5 rounded-md font-medium">doing research</span> on cutting-edge technology that can impact millions of lives.
+              I&apos;m a Web3 Community Lead passionate about <span className="bg-neutral-200 px-1.5 py-0.5 rounded-md font-medium">building digital communities</span> and{" "}
+              <span className="bg-neutral-200 px-1.5 py-0.5 rounded-md font-medium">exploring blockchain innovations</span> that shape the future of web3.
             </p>
             <p>
-              With <span className="bg-neutral-200 px-1.5 py-0.5 rounded-md font-medium">4 years of experience</span>{" "}
-              building scalable web apps and going from 0-1 on many personal projects.
+              With <span className="bg-neutral-200 px-1.5 py-0.5 rounded-md font-medium">5 years of experience</span>{" "}
+              I&apos;ve helped scale Web3 projects, foster engaged user bases, and drive adoption in the decentralized space.
             </p>
           </motion.div>
           
@@ -144,7 +141,7 @@ export default function Home() {
           >
             <h2 className="text-2xl md:text-3xl font-bold">
               <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
-                Featured Projects
+                Community Projects
               </span>
             </h2>
             <motion.div whileHover={{ x: 3 }} transition={{ duration: 0.2 }}>
@@ -167,12 +164,8 @@ export default function Home() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
                 whileHover={{ y: -5 }}
-                className="h-full" // Added to ensure motion div takes full height
+                className="h-full"
               >
-                <Link
-                  href={`/projects/${project.slug}`}
-                  className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 h-full flex flex-col" // Added h-full and flex-col
-                >
                   <div className="relative h-48 overflow-hidden">
                     <Image
                       src={project.image || "/placeholder.svg"}
@@ -183,14 +176,14 @@ export default function Home() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   
-                  <div className="p-5 flex-grow flex flex-col"> {/* Added flex-grow and flex flex-col */}
+                  <div className="p-5 flex-grow flex flex-col">
                     <h3 className="font-bold text-xl mb-2 group-hover:text-primary transition-colors duration-300">
                       {project.title}
                     </h3>
-                    <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-grow"> {/* Changed to line-clamp-3 and added flex-grow */}
+                    <p className="text-gray-600 text-sm mb-4 line-clamp-3 flex-grow">
                       {project.description}
                     </p>
-                    <div className="flex flex-wrap gap-2 mt-auto"> {/* Added mt-auto to push tags to bottom */}
+                    <div className="flex flex-wrap gap-2 mt-auto">
                       {project.tags.slice(0, 3).map((tag) => (
                         <Badge
                           key={tag}
@@ -210,7 +203,6 @@ export default function Home() {
                       )}
                     </div>
                   </div>
-                </Link>
               </motion.div>
             ))}
           </div>
@@ -226,10 +218,6 @@ export default function Home() {
                   transition={{ duration: 0.6, delay: 0.3 + (index * 0.15) }}
                   whileHover={{ y: -3 }}
                 >
-                  <Link
-                    href={`/projects/${project.slug}`}
-                    className="group flex flex-col md:flex-row gap-5 bg-white p-4 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
-                  >
                     <div className="relative h-40 md:w-48 md:h-40 rounded-lg overflow-hidden flex-shrink-0">
                       <Image
                         src={project.image || "/placeholder.svg"}
@@ -268,7 +256,6 @@ export default function Home() {
                         )}
                       </div>
                     </div>
-                  </Link>
                 </motion.div>
               ))}
             </div>
@@ -276,7 +263,7 @@ export default function Home() {
         </div>
       </section>
       
-      {/* Tech stack section */}
+      {/* Platforms section */}
       <section className="py-20 max-w-5xl mx-auto px-4 md:px-10">
         <motion.h2 
           initial={{ opacity: 0, y: 20 }}
@@ -286,7 +273,7 @@ export default function Home() {
           className="text-2xl md:text-3xl font-bold mb-10"
         >
           <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/70">
-            Tech Stack
+            Platforms & Tools
           </span>
         </motion.h2>
         
@@ -317,7 +304,6 @@ export default function Home() {
           ))}
         </div>
       </section>
-      
       <Footer />
     </main>
   )

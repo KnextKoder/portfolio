@@ -1,12 +1,12 @@
 import Image from "next/image"
 import Footer from "@/components/footer"
-import { BookOpen, Code, Sparkles, Lightbulb } from "lucide-react"
+import { Users, Palette, Gamepad, Target } from "lucide-react"
 
 const images = [
-  "/innovation.jpg",
-  "/astronaut.jpg",
-  "/intelligence.jpg",
-  "/marvel.jpg",
+  "/community.jpg",
+  "/web3.jpg",
+  "/design.jpg",
+  "/gaming.jpg",
 ]
 
 export default function About() {
@@ -15,14 +15,14 @@ export default function About() {
       {/* Modern header section */}
       <div className="mb-12">
         <div className="flex items-center gap-3 mb-4">
-          <span className="text-4xl animate-bounce">💬</span>
+          <span className="text-4xl animate-bounce">🌐</span>
           <div className="h-px flex-grow bg-gradient-to-r from-primary/50 to-transparent"></div>
         </div>
         <h1 className="text-3xl md:text-4xl lg:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary font-black mb-4">
-          More About Me...
+          About My Journey
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl">
-          Developer, researcher, entrepreneur, and design enthusiast on a journey to create digital wonders.
+          Web3 Community Lead, Designer, and Gamer on a mission to build vibrant decentralized ecosystems.
         </p>
       </div>
 
@@ -61,14 +61,14 @@ export default function About() {
         <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
           <div className="flex items-start mb-4">
             <div className="bg-primary/10 p-3 rounded-full mr-4">
-              <Code className="w-6 h-6 text-primary" />
+              <Users className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">The Developer</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">Who I Am</h2>
               <p className="text-gray-700 leading-relaxed">
-                Since the early days of my journey, I&apos;ve been captivated by the art of crafting exceptional digital
-                experiences. As a developer, I thrive on turning lines of code into functional and elegant solutions. My
-                goal is to not just create software, but to build digital marvels that seamlessly merge form and function.
+                I&apos;m a Web3 Community Lead, Designer, and Gamer with 5 years of experience in building, scaling, and managing decentralized communities. 
+                My passion lies in fostering engagement, collaboration, and innovation within blockchain ecosystems while bringing creativity 
+                and immersive experiences to digital spaces.
               </p>
             </div>
           </div>
@@ -77,14 +77,14 @@ export default function About() {
         <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
           <div className="flex items-start mb-4">
             <div className="bg-primary/10 p-3 rounded-full mr-4">
-              <BookOpen className="w-6 h-6 text-primary" />
+              <Target className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">The Writer & Researcher</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">My Mission</h2>
               <p className="text-gray-700 leading-relaxed">
-                But my journey doesn&apos;t stop at coding. With a heart full of words and a mind brimming with ideas, I&apos;ve
-                ventured into the realm of writing and research. From tech articles that unravel complex concepts to creative tales that
-                ignite the imagination, I weave words to inform, entertain, and inspire.
+                I believe that strong communities, compelling design, and interactive experiences drive the success of Web3 projects. 
+                My mission is to create inclusive, engaged, and self-sustaining ecosystems that empower users, developers, and stakeholders 
+                while integrating creative design and gaming elements into blockchain projects.
               </p>
             </div>
           </div>
@@ -93,14 +93,14 @@ export default function About() {
         <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
           <div className="flex items-start mb-4">
             <div className="bg-primary/10 p-3 rounded-full mr-4">
-              <Sparkles className="w-6 h-6 text-primary" />
+              <Palette className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">The Design Enthusiast</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">Design Approach</h2>
               <p className="text-gray-700 leading-relaxed">
-                What sets me apart is my unwavering appreciation for design. I believe that aesthetics and usability go hand
-                in hand. My eye for awesome design ensures that every project I undertake not only works flawlessly under
-                the hood but also looks stunning on the surface.
+                My design philosophy centers on creating intuitive, visually stunning interfaces that enhance user experience in the Web3 space.
+                I specialize in bridging the gap between complex blockchain functionality and accessible design, making decentralized applications
+                approachable for mainstream users while maintaining the cutting-edge aesthetics that define the Web3 movement.
               </p>
             </div>
           </div>
@@ -109,22 +109,18 @@ export default function About() {
         <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
           <div className="flex items-start mb-4">
             <div className="bg-primary/10 p-3 rounded-full mr-4">
-              <Lightbulb className="w-6 h-6 text-primary" />
+              <Gamepad className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">The Journey Ahead</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">Gaming & Web3</h2>
               <p className="text-gray-700 leading-relaxed">
-                Through this website, I aim to share my insights, experiences, and creations with you. Whether you&apos;re a
-                fellow developer seeking solutions, a fellow writer in search of inspiration, or simply someone who
-                appreciates the finer aspects of design, there&apos;s something here for you.
-              </p>
-              <p className="text-gray-700 leading-relaxed mt-4">
-                Join me on this journey of bytes and narratives, logic and creativity, code and prose. Together, we can
-                explore the boundless possibilities of technology and storytelling, all while reveling in the sheer beauty
-                of thoughtful design.
+                As an avid gamer, I bring a unique perspective to Web3 projects by incorporating gamification elements that drive engagement and retention.
+                I believe in the power of play to create memorable experiences and build stronger communities, whether through tokenized rewards,
+                interactive onboarding, or fully-immersive metaverse environments.
               </p>
               <p className="text-gray-700 leading-relaxed mt-4 font-medium">
-                Thank you for being here, and I can&apos;t wait to embark on this adventure with you.
+                I&apos;m passionate about connecting with others who share my vision for a more engaging, creative, and community-driven Web3 ecosystem.
+                Let&apos;s build the future of decentralized communities together.
               </p>
             </div>
           </div>

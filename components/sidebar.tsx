@@ -1,7 +1,7 @@
 "use client"
 import Image from "next/image"
 import Link from "next/link"
-import { Zap, MessageSquare, Briefcase, FileText, Mail, Linkedin, ChevronRight, Github } from "lucide-react"
+import { Zap, MessageSquare, Briefcase, FileText, Mail, ChevronRight } from "lucide-react"
 import { usePathname } from 'next/navigation'
 import { useSidebar } from "./sidebar-provider"
 import { motion } from "framer-motion"
@@ -11,14 +11,12 @@ const navItems = [
   { href: "/", icon: Zap, text: "Home" },
   { href: "/about", icon: MessageSquare, text: "About" },
   { href: "/projects", icon: Briefcase, text: "Projects" },
-  { href: "/research", icon: FileText, text: "Research" },
+  { href: "/community", icon: FileText, text: "Community" },
   { href: "/contact", icon: Mail, text: "Contact" },
 ]
 
 const socialItems = [
-  { href: "https://github.com/KnextKoder", icon: Github, text: "Github" },
-  { href: "https://twitter.com/marvel0_", icon: "x", text: "Twitter" }, // Changed to use "x" as identifier
-  { href: "https://linkedin.com/in/marvelous-adesina-271b2128b", icon: Linkedin, text: "LinkedIn" },
+  { href: "https://x.com/ThatNewton?t=_Ue6PdtRgGRAuIduJ2wpBw&s=09", icon: "x", text: "Twitter" }, // Changed to use "x" as identifier
 ]
 
 export default function Sidebar() {
@@ -80,7 +78,7 @@ export default function Sidebar() {
           >
             <div className="relative">
               <Image
-                src="/profile.jpg"
+                src="/newton-p.jpg"
                 alt="Avatar"
                 width={48}
                 height={48}
@@ -91,8 +89,8 @@ export default function Sidebar() {
               <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-500 rounded-full ring-2 ring-white"></span>
             </div>
             <div className="flex flex-col">
-              <p className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Marvel</p>
-              <p className="text-xs text-gray-500">Full-stack Developer</p>
+              <p className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Newton</p>
+              <p className="text-xs text-gray-500">Web3 community Lead</p>
             </div>
           </motion.div>
 
@@ -168,7 +166,7 @@ export default function Sidebar() {
                         />
                       </div>
                     ) : (
-                      <item.icon className="h-4 w-4" />
+                      <item.icon/>
                     )}
                   </Link>
                 </motion.div>

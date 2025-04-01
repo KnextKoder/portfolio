@@ -1,9 +1,9 @@
 "use client"
 import Image from "next/image"
-import Link from "next/link"
+// import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import Footer from "@/components/footer"
-import { ArrowUpRight } from "lucide-react"
+import { ArrowUpRight, Users, MessageCircle, Calendar, Award } from "lucide-react"
 import { motion } from "framer-motion"
 
 interface Project {
@@ -11,38 +11,65 @@ interface Project {
   title: string
   description: string
   image: string
+  achievements: string[]
   tags: string[]
 }
 
 const projects: Project[] = [
   {
-    slug: "obin-labs",
-    title: "Obin Labs",
-    description: "A decentralized network of devices for inferencing sharded LLMs.",
-    image: "/Obin Labs.svg",
-    tags: ["Pytorch","Go", "Python", "Docker", "AWS"],
+    slug: "pickvibes",
+    title: "Pickvibes Community Growth",
+    description: "Led growth strategies for the Pickvibes community, implementing engagement tactics and content strategies.",
+    image: "/community-growth.jpg",
+    achievements: ["Scaled Telegram from 100 to 1000 members in 2 months"],
+    tags: ["Community Growth", "Telegram", "Content Strategy"],
   },  
   {
-    slug: "wengine",
-    title: "Wengine",
-    description: "An advertising platform for whatsapp",
-    image: "/wengine.svg",
-    tags: ["Nextjs", "Typescript", "Tailwindcss", "Pi Network- SDK"],
+    slug: "meme-token",
+    title: "Meme Token Investor Community",
+    description: "Managed investor relations and community engagement for a popular meme token project.",
+    image: "/investor-community.jpg",
+    achievements: ["Successfully onboarded new investors through community initiatives"],
+    tags: ["Investor Relations", "Token Community", "Discord Management"],
   },
   {
-    slug: "inbox-ai",
-    title: "Inbox AI",
-    description: "A managed email and authentication client for agents to communicate and access restricted sites.",
-    image: "/inboxai1.png",
-    tags: ["Nextjs", "Tailwindcss", "Typescript", "AWS-SES", "Groq"],
+    slug: "osea-pirates",
+    title: "O'sea Pirate Community",
+    description: "Effectively managed the O'sea pirate community, creating engagement opportunities and governance structure.",
+    image: "/osea-community.jpg",
+    achievements: ["Established community guidelines", "Created engagement programs"],
+    tags: ["Community Management", "NFT Community", "Governance"],
   },
   {
-    slug: "groq-agents",
-    title: "Groq Agents",
-    description:
-      "A typescript SDK and framework for building autonomous AI agents that can self coordinate and self develop tools to complete a task.",
-    image: "/groqagents1.png",
-    tags: ["Typescript", "Groq", "Vercel-AI SDK", "Zod"],
+    slug: "solana-events",
+    title: "Solana Web3 Events",
+    description: "Organized and facilitated Web3 onboarding events in collaboration with Solana all-stars.",
+    image: "/web3-events.jpg",
+    achievements: ["Onboarded 500+ new Web3 enthusiasts through organized events"],
+    tags: ["Event Planning", "Solana", "Web3 Education"],
+  },
+]
+
+const strategies = [
+  {
+    icon: <MessageCircle className="w-6 h-6 text-primary" />,
+    title: "Community Events",
+    description: "Hosting AMAs, Twitter Spaces, and Discord discussions to foster engagement and knowledge sharing.",
+  },
+  {
+    icon: <Award className="w-6 h-6 text-primary" />,
+    title: "Ambassador Programs",
+    description: "Creating initiatives that empower community members to become advocates for projects and protocols.",
+  },
+  {
+    icon: <Calendar className="w-6 h-6 text-primary" />,
+    title: "Content & Education",
+    description: "Developing guides, newsletters, and video content to onboard and educate users about Web3 technologies.",
+  },
+  {
+    icon: <Users className="w-6 h-6 text-primary" />,
+    title: "Incentives",
+    description: "Implementing bounties and reward programs to keep members engaged and motivated within the ecosystem.",
   },
 ]
 
@@ -89,7 +116,7 @@ export default function Projects() {
             }}
             className="text-4xl"
           >
-            ⚡
+            🚀
           </motion.span>
           <motion.div 
             initial={{ scaleX: 0 }}
@@ -104,7 +131,7 @@ export default function Projects() {
           transition={{ duration: 0.7, delay: 0.2 }}
           className="text-3xl md:text-5xl lg:text-6xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary font-black"
         >
-          My Projects
+          Projects & Contributions
         </motion.h1>
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
@@ -112,11 +139,11 @@ export default function Projects() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mt-4 text-lg text-gray-600 max-w-2xl"
         >
-          Building innovative solutions through code. Here&apos;s what I&apos;ve been working on.
+          Building vibrant Web3 communities and driving engagement through innovative strategies and collaborative initiatives.
         </motion.p>
       </motion.div>
 
-      {/* Modern grid layout */}
+      {/* Projects grid layout */}
       <motion.div 
         variants={containerVariants}
         initial="hidden"
@@ -130,10 +157,7 @@ export default function Projects() {
             whileHover={{ y: -5 }}
             transition={{ duration: 0.3 }}
           >
-            <Link
-              href={`/projects/${project.slug}`}
-              className="group relative flex flex-col bg-white border border-gray-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 h-full"
-            >
+          
               {/* Project Image with overlay */}
               <div className="relative h-48 w-full overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent z-10"></div>
@@ -163,6 +187,14 @@ export default function Projects() {
                   <p className="text-gray-600 mb-4">
                     {project.description}
                   </p>
+                  <div className="mt-3 space-y-2">
+                    {project.achievements.map((achievement, i) => (
+                      <div key={i} className="flex items-center gap-2">
+                        <div className="w-1.5 h-1.5 rounded-full bg-primary"></div>
+                        <p className="text-sm text-gray-700">{achievement}</p>
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 
                 {/* Tags */}
@@ -197,9 +229,44 @@ export default function Projects() {
                 transition={{ duration: 0.8 }}
                 className="h-1.5 w-full bg-gradient-to-r from-primary to-secondary origin-left"
               ></motion.div>
-            </Link>
           </motion.div>
         ))}
+      </motion.div>
+
+      {/* Engagement Strategies Section */}
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.7 }}
+        className="mb-16"
+      >
+        <h2 className="text-2xl md:text-3xl font-bold mb-8 text-gray-800">Engagement Strategies</h2>
+        <p className="text-gray-700 mb-8">
+          I utilize data-driven and organic growth strategies to enhance community participation and brand visibility. Some of my key approaches include:
+        </p>
+        
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {strategies.map((strategy, index) => (
+            <motion.div
+              key={strategy.title}
+              variants={itemVariants}
+              initial="hidden"
+              animate="visible"
+              transition={{ delay: 0.2 * index }}
+              className="bg-white p-6 rounded-xl border border-gray-200 shadow-sm hover:shadow-md transition-shadow"
+            >
+              <div className="flex items-start gap-4">
+                <div className="bg-primary/10 p-3 rounded-full">
+                  {strategy.icon}
+                </div>
+                <div>
+                  <h3 className="font-bold text-xl mb-2">{strategy.title}</h3>
+                  <p className="text-gray-600">{strategy.description}</p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
       </motion.div>
 
       <Footer />
