@@ -10,7 +10,7 @@ import { motion } from "framer-motion"
 
 const projects = {
   "wengine": {
-    title: "Wengine",
+    title: "Wengine ",
     description: "An advertising platform for whatsapp",
     images: [
       "/wengine1.png",
