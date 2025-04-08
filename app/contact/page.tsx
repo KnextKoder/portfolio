@@ -84,8 +84,8 @@ export default function Contact() {
             <div className="space-y-4 text-gray-700">
               <p className="flex flex-col">
                 <span className="text-sm text-gray-500">My Email</span>
-                <a href="mailto:knextkoderklan@gmail.com" className="hover:text-primary transition-colors">
-                  knextkoderklan@gmail.com
+                <a href="mailto:jerrydara8@gmail.com" className="hover:text-primary transition-colors">
+                  jerrydara8@gmail.com
                 </a>
               </p>
               

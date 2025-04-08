@@ -3,10 +3,10 @@ import Footer from "@/components/footer"
 import { Users, Palette, Gamepad, Target } from "lucide-react"
 
 const images = [
-  "/community.jpg",
-  "/web3.jpg",
-  "/design.jpg",
-  "/gaming.jpg",
+  "/something.jpg",
+  "/crypto-about.jpg",
+  "/ethereum-about.jpg",
+  "/blockchain-about.jpg",
 ]
 
 export default function About() {

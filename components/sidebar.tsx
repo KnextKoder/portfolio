@@ -16,7 +16,9 @@ const navItems = [
 ]
 
 const socialItems = [
-  { href: "https://x.com/ThatNewton?t=_Ue6PdtRgGRAuIduJ2wpBw&s=09", icon: "x", text: "Twitter" }, // Changed to use "x" as identifier
+  { href: "https://x.com/ThatNewton?t=_Ue6PdtRgGRAuIduJ2wpBw&s=09", icon: "x", text: "Twitter" },
+  { href: "https://t.me/hallnewt", icon: "/telegram.png", text: "Telegram" },
+  
 ]
 
 export default function Sidebar() {
@@ -166,7 +168,15 @@ export default function Sidebar() {
                         />
                       </div>
                     ) : (
-                      <item.icon/>
+                      <div className="flex items-center justify-center h-4 w-4">
+                        <Image 
+                          src={item.icon} 
+                          alt="X (Twitter)" 
+                          width={20} 
+                          height={20}
+                          className="object-contain h-full w-full"
+                        />
+                      </div>
                     )}
                   </Link>
                 </motion.div>
