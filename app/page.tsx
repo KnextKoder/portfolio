@@ -46,18 +46,18 @@ const projects: Project[] = [
 ]
 
 const techStack = [
-  { name: "Discord", logo: "/discord.svg", width: 120 },
-  { name: "Telegram", logo: "/telegram.svg", width: 120 },
-  { name: "Twitter", logo: "/twitter.svg", width: 120 },
-  { name: "Notion", logo: "/notion.svg", width: 120 },
+  { name: "Discord", logo: "/discord.png", width: 120 },
+  { name: "Telegram", logo: "/telegram.png", width: 120 },
+  { name: "Twitter", logo: "/X.png", width: 120 },
+  { name: "Notion", logo: "/notion.png", width: 120 },
   { name: "Snapshot", logo: "/snapshot.svg", width: 120 },
   { name: "Figma", logo: "/figma.webp", width: 96 },
   { name: "NFT Tools", logo: "/nft.svg", width: 120 },
   { name: "DAO Tools", logo: "/dao.svg", width: 120 },
-  { name: "OpenSea", logo: "/opensea.svg", width: 120 },
-  { name: "Arweave", logo: "/arweave.svg", width: 120 },
-  { name: "Ethereum", logo: "/ethereum.svg", width: 120 },
-  { name: "Solana", logo: "/solana.svg", width: 120 },
+  { name: "OpenSea", logo: "/opensea.png", width: 120 },
+  { name: "Arweave", logo: "/arweave.png", width: 120 },
+  { name: "Ethereum", logo: "/ethereum.png", width: 120 },
+  { name: "Solana", logo: "/solana.png", width: 120 },
 ]
 
 export default function Home() {
