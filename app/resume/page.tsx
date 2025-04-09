@@ -24,7 +24,7 @@ const companies: Company[] = [
     color: "#8A2BE2", // Purple color for community focus
     roles: [
       {
-        period: "Jan 2024 - Present",
+        period: "Oct 2024 - Jan 2025",
         title: "Head of Community",
         focus: "Leading community growth and engagement strategies for Web3 projects",
         achievements: [
@@ -42,7 +42,7 @@ const companies: Company[] = [
     color: "#FF6B6B", // Pinkish color for meme token theme
     roles: [
       {
-        period: "May 2023 - Dec 2023",
+        period: "Jan 2021 - Present",
         title: "Community Manager",
         focus: "Managing investor relations and community engagement for token projects",
         achievements: [
@@ -78,7 +78,7 @@ const companies: Company[] = [
     color: "#14F195", // Solana green
     roles: [
       {
-        period: "Mar 2021 - Jul 2022",
+        period: "Mar 2023 - Present",
         title: "Web3 Community Specialist",
         focus: "Organizing educational events and onboarding programs for blockchain adoption",
         achievements: [
@@ -89,7 +89,7 @@ const companies: Company[] = [
         ],
       },
       {
-        period: "Jan 2020 - Feb 2021",
+        period: "Jan 2020 - Present",
         title: "Community Moderator",
         focus: "Managing online communities and providing front-line support",
         isPromotion: true,
