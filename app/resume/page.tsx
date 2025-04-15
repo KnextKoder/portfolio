@@ -28,10 +28,10 @@ const companies: Company[] = [
         title: "Co-Founder",
         focus: "Building a decentralized datacenter powered by humans",
         achievements: [
-          "Developed a new feature that improves the shopping experience",
-          "Implemented a recommendation algorithm to suggest products",
-          "Enhanced the checkout process making it more intuitive and user-friendly",
-          "Built a feature for tracking packages in real-time",
+          "Pioneered a novel model sharding technique that allows LLMs to run across networks of smartphones",
+          "Developed a differential privacy mechanism ensuring user data security while contributing to network computation",
+          "Implemented a peer discovery protocol in Go that maintains efficiency on unstable mobile networks",
+          "Scaled the beta to 200+ devices with performance matching dedicated GPU servers at 5% of operating costs"
         ],
       },
     ],
@@ -45,10 +45,10 @@ const companies: Company[] = [
         title: "Co-Founder",
         focus: "Building the future of AI x Education-Technology",
         achievements: [
-          "Developed a new feature that improves the shopping experience",
-          "Implemented a recommendation algorithm to suggest products",
-          "Enhanced the checkout process making it more intuitive and user-friendly",
-          "Built a feature for tracking packages in real-time",
+          "Developed an AI-powered adaptive learning system that personalizes curriculum based on student progress",
+          "Built a real-time collaboration platform enabling synchronous learning between students and AI tutors",
+          "Implemented an assessment engine that provides detailed feedback on student work using multimodal analysis",
+          "Designed and deployed a knowledge graph system to map educational concepts and optimize learning paths"
         ],
       },
     ],
@@ -63,10 +63,10 @@ const companies: Company[] = [
         title: "Full Stack Developer",
         focus: "Measuring the effectiveness of State-Of-The-Art AI Alignment research",
         achievements: [
-          "Developed a new feature that improves the shopping experience",
-          "Implemented a recommendation algorithm to suggest products",
-          "Enhanced the checkout process making it more intuitive and user-friendly",
-          "Built a feature for tracking packages in real-time",
+          "Created a visualization framework for tracking alignment methodologies across major research papers",
+          "Implemented a benchmarking system comparing alignment techniques against standardized safety metrics",
+          "Developed tools to capture and quantify alignment regressions in evolving AI systems",
+          "Built an interactive dashboard used by 30+ alignment researchers to coordinate testing methodologies"
         ],
       },
     ],
@@ -81,10 +81,10 @@ const companies: Company[] = [
         title: "Software Engineer",
         focus: "Building the future of search",
         achievements: [
-          "Improved the search algorithm to provide more relevant results",
-          "Developed a new feature that personalizes search results",
-          "Enhanced the search functionality making it more intuitive and user-friendly",
-          "Implemented a feature for tracking search history",
+          "Led development of a semantic search implementation improving query relevance by 37%",
+          "Built a context-aware recommendation system that increased user engagement with search results",
+          "Developed a multi-modal search capability handling text, image, and voice inputs simultaneously",
+          "Implemented query optimization algorithms that reduced response latency by 45%"
         ],
       },
       {
@@ -93,10 +93,10 @@ const companies: Company[] = [
         focus: "Building the future of social networking",
         isPromotion: true,
         achievements: [
-          "Developed a new feature that improves the user experience",
-          "Implemented a recommendation algorithm to suggest friends",
-          "Enhanced the news feed algorithm to show more relevant posts",
-          "Built a feature for tracking user activity",
+          "Developed a real-time activity feed using WebSockets that improved content delivery speed by 60%",
+          "Created a responsive UI component library that streamlined mobile and desktop interface consistency",
+          "Implemented advanced client-side caching strategies that reduced API calls by over 40%",
+          "Built the frontend for a content moderation system that helped scale user-generated content workflows"
         ],
       },
     ],
