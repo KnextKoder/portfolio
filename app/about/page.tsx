@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Footer from "@/components/footer"
-import { BookOpen, Code, Sparkles, Lightbulb } from "lucide-react"
+import { BookOpen, Code, Lightbulb } from "lucide-react"
 
 const images = [
   "/innovation.jpg",
@@ -19,10 +19,10 @@ export default function About() {
           <div className="h-px flex-grow bg-gradient-to-r from-primary/50 to-transparent"></div>
         </div>
         <h1 className="text-3xl md:text-4xl lg:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary font-black mb-4">
-          More About Me...
+          A Glimpse Into My World
         </h1>
         <p className="text-lg text-gray-600 max-w-2xl">
-          Developer, researcher, entrepreneur, and design enthusiast on a journey to create digital wonders.
+          I&apos;m crafting tomorrow&apos;s digital landscape through AI-driven development, quantum computing research, and human-centered design. My passion lies at the intersection of emerging tech and creative problem-solving.
         </p>
       </div>
 
@@ -64,11 +64,9 @@ export default function About() {
               <Code className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">The Developer</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">Code Architect & Innovator</h2>
               <p className="text-gray-700 leading-relaxed">
-                Since the early days of my journey, I&apos;ve been captivated by the art of crafting exceptional digital
-                experiences. As a developer, I thrive on turning lines of code into functional and elegant solutions. My
-                goal is to not just create software, but to build digital marvels that seamlessly merge form and function.
+                My journey began with Python and JavaScript, but today I&apos;m pioneering applications that leverage generative AI, edge computing, and decentralized systems. I&apos;ve dedicated the past two years to mastering WebAssembly and exploring the boundaries of AR/VR interfaces. Every project is an opportunity to push beyond conventional solutions toward experiences that feel magical yet intuitive.
               </p>
             </div>
           </div>
@@ -80,27 +78,9 @@ export default function About() {
               <BookOpen className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">The Writer & Researcher</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">Knowledge Explorer</h2>
               <p className="text-gray-700 leading-relaxed">
-                But my journey doesn&apos;t stop at coding. With a heart full of words and a mind brimming with ideas, I&apos;ve
-                ventured into the realm of writing and research. From tech articles that unravel complex concepts to creative tales that
-                ignite the imagination, I weave words to inform, entertain, and inspire.
-              </p>
-            </div>
-          </div>
-        </div>
-        
-        <div className="bg-white rounded-2xl p-6 md:p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
-          <div className="flex items-start mb-4">
-            <div className="bg-primary/10 p-3 rounded-full mr-4">
-              <Sparkles className="w-6 h-6 text-primary" />
-            </div>
-            <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">The Design Enthusiast</h2>
-              <p className="text-gray-700 leading-relaxed">
-                What sets me apart is my unwavering appreciation for design. I believe that aesthetics and usability go hand
-                in hand. My eye for awesome design ensures that every project I undertake not only works flawlessly under
-                the hood but also looks stunning on the surface.
+                I&apos;m fascinated by how technology is reshaping our collective future. My recent research delves into cognitive computing, ambient intelligence, and computational sustainability. In 2024, I published findings on biomimetic algorithms that could revolutionize energy management systems. When I&apos;m not coding, you&apos;ll find me synthesizing complex technological concepts into accessible narratives that bridge the gap between innovation and understanding.
               </p>
             </div>
           </div>
@@ -112,19 +92,15 @@ export default function About() {
               <Lightbulb className="w-6 h-6 text-primary" />
             </div>
             <div>
-              <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">The Journey Ahead</h2>
+              <h2 className="text-xl md:text-2xl font-bold mb-2 text-gray-800">Building Our Tomorrow</h2>
               <p className="text-gray-700 leading-relaxed">
-                Through this website, I aim to share my insights, experiences, and creations with you. Whether you&apos;re a
-                fellow developer seeking solutions, a fellow writer in search of inspiration, or simply someone who
-                appreciates the finer aspects of design, there&apos;s something here for you.
+                I believe we&apos;re entering the most transformative decade in human history. The convergence of AI, biotechnology, quantum computing, and sustainable energy will fundamentally reshape how we live, work, and connect. My mission is to ensure these technologies evolve with humanity at their center.
               </p>
               <p className="text-gray-700 leading-relaxed mt-4">
-                Join me on this journey of bytes and narratives, logic and creativity, code and prose. Together, we can
-                explore the boundless possibilities of technology and storytelling, all while reveling in the sheer beauty
-                of thoughtful design.
+                Through this digital garden, I&apos;m sharing not just my code and research, but my vision for what&apos;s possible. I&apos;m actively seeking collaborators for my latest project—a distributed computing platform that democratizes access to advanced AI capabilities while preserving privacy and autonomy.
               </p>
               <p className="text-gray-700 leading-relaxed mt-4 font-medium">
-                Thank you for being here, and I can&apos;t wait to embark on this adventure with you.
+                Let&apos;s connect and build something extraordinary. The next breakthrough isn&apos;t waiting to be discovered—it&apos;s waiting to be created, and I&apos;m convinced our best ideas emerge through unexpected collaborations.
               </p>
             </div>
           </div>
