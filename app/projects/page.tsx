@@ -16,8 +16,8 @@ interface Project {
 
 const projects: Project[] = [
   {
-    slug: "obin-labs",
-    title: "Obin Labs",
+    slug: "pico-labs",
+    title: "Pico Labs",
     description: "A decentralized network of devices for inferencing sharded LLMs.",
     image: "/Obin Labs.svg",
     tags: ["Pytorch","Go", "Python", "Docker", "AWS"],

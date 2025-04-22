@@ -38,13 +38,13 @@ const projects = {
     `,
     liveUrl: "https://inbox-ai-demo.vercel.app/",
   },
-  "obin-labs": {
-    title: "Obin Labs",
+  "pico-labs": {
+    title: "Pico Labs",
     description: "A decentralized network of devices for inferencing sharded LLMs on mobile phones.",
     images: ["/network.webp","/Obin Labs.svg",],
     tags: ["Pytorch","Go", "Python", "Docker", "AWS"],
     content: `
-      <p>Obin Labs represents my most ambitious project to date - a distributed computing platform that democratizes access to advanced AI by enabling large language models to run across networks of ordinary smartphones. This innovation addresses two critical challenges in AI deployment: the centralization of computing power and the environmental impact of large data centers.</p>
+      <p>Pico Labs represents my most ambitious project to date - a distributed computing platform that democratizes access to advanced AI by enabling large language models to run across networks of ordinary smartphones. This innovation addresses two critical challenges in AI deployment: the centralization of computing power and the environmental impact of large data centers.</p>
       
       <p>The core technology involves a novel approach to model sharding that I developed using PyTorch. Unlike traditional sharding techniques, my method dynamically allocates computation based on device capabilities and network conditions, allowing even entry-level smartphones to contribute meaningfully to inference tasks. The system uses a custom-built peer discovery and coordination protocol written in Go that achieves remarkable efficiency even on unstable mobile networks.</p>
       
