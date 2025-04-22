@@ -19,7 +19,7 @@ const projects: Project[] = [
     slug: "pico-labs",
     title: "Pico Labs",
     description: "A decentralized network of devices for inferencing sharded LLMs.",
-    image: "/Obin Labs.svg",
+    image: "/Pico Labs.svg",
     tags: ["Pytorch","Go", "Python", "Docker", "AWS"],
   },  
   {

@@ -41,7 +41,7 @@ const projects = {
   "pico-labs": {
     title: "Pico Labs",
     description: "A decentralized network of devices for inferencing sharded LLMs on mobile phones.",
-    images: ["/network.webp","/Obin Labs.svg",],
+    images: ["/network.webp","/Pico Labs.svg",],
     tags: ["Pytorch","Go", "Python", "Docker", "AWS"],
     content: `
       <p>Pico Labs represents my most ambitious project to date - a distributed computing platform that democratizes access to advanced AI by enabling large language models to run across networks of ordinary smartphones. This innovation addresses two critical challenges in AI deployment: the centralization of computing power and the environmental impact of large data centers.</p>
