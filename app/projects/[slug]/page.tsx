@@ -104,7 +104,7 @@ export default function ProjectPage() {
     visible: { 
       opacity: 1,
       y: 0,
-      transition: { duration: 0.5, ease: "easeOut" }
+      transition: { duration: 0.5, ease: [0.17, 0.67, 0.83, 0.67] }
     }
   }
 
