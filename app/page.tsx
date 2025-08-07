@@ -4,7 +4,7 @@ import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import Footer from "@/components/footer"
 import { ArrowUpRight } from "lucide-react"
-import { motion } from "framer-motion"
+import { motion } from "framer-motion" // Can't use framer motion unless in use client mode
 
 interface Project {
   slug: string
@@ -16,25 +16,25 @@ interface Project {
 
 const projects: Project[] = [
   {
-    slug: "pico-labs",
-    title: "Pico Labs",
-    description: "A decentralized network of devices for inferencing sharded LLMs.",
-    image: "/Pico Labs.svg",
-    tags: ["Pytorch","Go", "Python", "Docker", "AWS"],
+    slug: "synkhiv",
+    title: "Synkhiv",
+    description: "A decentralized network of devices to train and inference AI.",
+    image: "/Synkhiv.png",
+    tags: ["Typescript", "Python", "Pytorch", "Expo", "Electron", "Docker", "Azure"],
   },  
   {
     slug: "wengine",
     title: "Wengine",
     description: "An advertising platform for whatsapp",
     image: "/wengine.svg",
-    tags: ["Nextjs", "Typescript", "Tailwindcss", "Pi Network- SDK"],
+    tags: ["Nextjs", "Typescript", "Tailwindcss", "Pi Network-SDK"],
   },
   {
-    slug: "inbox-ai",
-    title: "Inbox AI",
-    description: "A managed email and authentication client for agents to communicate and access restricted sites.",
-    image: "/inboxai1.png",
-    tags: ["Nextjs", "Tailwindcss", "Typescript", "AWS-SES", "Groq"],
+    slug: "maylng",
+    title: "Maylng",
+    description: "Email, authentication & custom tools for AI—now your agents can seamlessly integrate and use 3rd Party Software like a real person",
+    image: "/maylng.png",
+    tags: ["Typescript", "Python", "AWS", "Azure", "Golang", "Next JS"],
   },
   {
     slug: "groq-agents",
@@ -52,6 +52,7 @@ const techStack = [
   { name: "Go", logo: "/golang.png", width: 96 },
   { name: "Framer Motion", logo: "/framer.webp", width: 96 },
   { name: "AWS", logo: "/aws.webp", width: 96 },
+  { name: "Azure", logo: "/azure.svg", width: 96 },
   { name: "Figma", logo: "/figma.webp", width: 96 },
   { name: "Node", logo: "/node.webp", width: 200 },
   { name: "Tailwind", logo: "/tailwind.webp", width: 200 },
@@ -110,20 +111,20 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.6 }}
-            className="flex flex-wrap gap-3 mt-2"
+            className="flex flex-col sm:flex-row gap-3 mt-2 w-full max-w-xs sm:max-w-none"
           >
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-full sm:w-auto">
               <Link 
                 href="/resume" 
-                className="px-5 py-2.5 rounded-lg bg-primary text-white font-medium hover:bg-primary/90 transition-colors"
+                className="w-full sm:w-auto block text-center px-5 py-2.5 rounded-lg bg-primary text-white font-medium hover:bg-primary/90 transition-colors"
               >
                 View Resume
               </Link>
             </motion.div>
-            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }}>
+            <motion.div whileHover={{ scale: 1.03 }} whileTap={{ scale: 0.97 }} className="w-full sm:w-auto">
               <Link 
                 href="/projects" 
-                className="px-5 py-2.5 rounded-lg border border-gray-300 hover:border-gray-400 font-medium transition-colors"
+                className="w-full sm:w-auto block text-center px-5 py-2.5 rounded-lg border border-gray-300 hover:border-gray-400 font-medium transition-colors"
               >
                 Explore Projects
               </Link>

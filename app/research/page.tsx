@@ -95,7 +95,7 @@ export default function Research() {
           transition={{ duration: 0.7, delay: 0.3 }}
           className="mt-4 text-lg text-gray-600 max-w-2xl"
         >
-          Exploring some of the cutting-edge technologies I&apos;m actively studying and researching.
+          Check out some of the cutting-edge technologies I&apos;m actively studying and researching.
         </motion.p>
       </motion.div>
 

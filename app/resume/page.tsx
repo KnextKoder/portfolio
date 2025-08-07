@@ -20,7 +20,7 @@ interface Company {
 
 const companies: Company[] = [
   {
-    name: "Pico Labs",
+    name: "Synkhiv",
     color: "#000000",
     roles: [
       {

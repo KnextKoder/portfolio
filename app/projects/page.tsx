@@ -16,11 +16,11 @@ interface Project {
 
 const projects: Project[] = [
   {
-    slug: "pico-labs",
-    title: "Pico Labs",
-    description: "A decentralized network of devices for inferencing sharded LLMs.",
-    image: "/Pico Labs.svg",
-    tags: ["Pytorch","Go", "Python", "Docker", "AWS"],
+    slug: "synkhiv",
+    title: "Synkhiv",
+    description: "A decentralized network of devices to train and inference AI.",
+    image: "/Synk.png",
+    tags: ["Typescript", "Python", "Pytorch", "Expo", "Electron", "Docker", "Azure"],
   },  
   {
     slug: "wengine",
@@ -30,11 +30,11 @@ const projects: Project[] = [
     tags: ["Nextjs", "Typescript", "Tailwindcss", "Pi Network- SDK"],
   },
   {
-    slug: "inbox-ai",
-    title: "Inbox AI",
-    description: "A managed email and authentication client for agents to communicate and access restricted sites.",
-    image: "/inboxai1.png",
-    tags: ["Nextjs", "Tailwindcss", "Typescript", "AWS-SES", "Groq"],
+    slug: "maylng",
+    title: "Maylng",
+    description: "Email, authentication & custom tools for AI—now your agents can seamlessly integrate and use 3rd Party Software like a real person",
+    image: "/maylng_mascot.png",
+    tags: ["Typescript", "Python", "AWS", "Azure", "Golang", "Next JS"],
   },
   {
     slug: "groq-agents",

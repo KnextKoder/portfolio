@@ -17,7 +17,7 @@ const navItems = [
 
 const socialItems = [
   { href: "https://github.com/KnextKoder", icon: Github, text: "Github" },
-  { href: "https://twitter.com/marvel0_", icon: "x", text: "Twitter" }, // Changed to use "x" as identifier
+  { href: "https://twitter.com/0xmarvel_", icon: "x", text: "Twitter" }, // Changed to use "x" as identifier
   { href: "https://linkedin.com/in/marvelous-adesina-271b2128b", icon: Linkedin, text: "LinkedIn" },
 ]
 
@@ -93,6 +93,7 @@ export default function Sidebar() {
             <div className="flex flex-col">
               <p className="font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">Marvel</p>
               <p className="text-xs text-gray-500">Full-stack Developer</p>
+              <p className="text-xs text-gray-500">Jack-of-all-Trades</p>
             </div>
           </motion.div>
 
@@ -175,11 +176,11 @@ export default function Sidebar() {
               ))}
             </div>
             
-            <div className="px-3 pt-4">
+            {/* <div className="px-3 pt-4">
               <p className="text-xs text-gray-500">
                 Based in Osun, Nigeria
               </p>
-            </div>
+            </div> */}
           </div>
         </div>
 

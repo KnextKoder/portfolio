@@ -24,11 +24,11 @@ const projects = {
     `,
     liveUrl: "https://wengine.com.ng",
   },
-  "inbox-ai": {
-    title: "Inbox AI",
-    description: "A managed email and authentication client for agents to communicate and access restricted sites.",
-    images: ["/inboxai1.png","/inboxai2.png"],
-    tags: ["Nextjs", "Tailwindcss", "Typescript", "AWS-SES", "Groq"],
+  "maylng": {
+    title: "Maylng",
+    description: "Email, authentication & custom tools for AI—now your agents can seamlessly integrate and use 3rd Party Software like a real person",
+    images: ["/maylng_mascot.png","/maylng_sdk.png"],
+    tags: ["Typescript", "Python", "AWS", "Azure", "Golang", "Next JS"],
     content: `
       <p>Inbox AI represents a paradigm shift in how AI agents interact with human-centric digital infrastructure. I designed this system to solve a fundamental problem: AI agents need secure, verifiable identities to access authenticated services and communicate via email - capabilities that were previously challenging for non-human actors.</p>
       
@@ -36,15 +36,15 @@ const projects = {
       
       <p>From a technical perspective, I built Inbox AI using Next.js and TypeScript, with a robust backend infrastructure leveraging AWS SES for email delivery and management. The integration with Groq's high-performance inference API enables the agents to generate contextually appropriate responses and handle complex email threads with near-human comprehension.</p>
     `,
-    liveUrl: "https://inbox-ai-demo.vercel.app/",
+    liveUrl: "https://github.com/maylng",
   },
-  "pico-labs": {
-    title: "Pico Labs",
-    description: "A decentralized network of devices for inferencing sharded LLMs on mobile phones.",
-    images: ["/network.webp","/Pico Labs.svg",],
+  "synkhiv": {
+    title: "Synkhiv",
+    description: "A decentralized network of devices to train and inference AI.",
+    images: ["/Synkhiv.png","/Synk.png",],
     tags: ["Pytorch","Go", "Python", "Docker", "AWS"],
     content: `
-      <p>Pico Labs represents my most ambitious project to date - a distributed computing platform that democratizes access to advanced AI by enabling large language models to run across networks of ordinary smartphones. This innovation addresses two critical challenges in AI deployment: the centralization of computing power and the environmental impact of large data centers.</p>
+      <p>Synkhiv represents my most ambitious project to date - a distributed computing platform that democratizes access to advanced AI by enabling large language models to run across networks of ordinary smartphones. This innovation addresses two critical challenges in AI deployment: the centralization of computing power and the environmental impact of large data centers.</p>
       
       <p>The core technology involves a novel approach to model sharding that I developed using PyTorch. Unlike traditional sharding techniques, my method dynamically allocates computation based on device capabilities and network conditions, allowing even entry-level smartphones to contribute meaningfully to inference tasks. The system uses a custom-built peer discovery and coordination protocol written in Go that achieves remarkable efficiency even on unstable mobile networks.</p>
       
@@ -52,7 +52,7 @@ const projects = {
       
       <p>The AWS component provides the coordination layer and fallback computing resources when the peer network cannot meet demand thresholds. My implementation uses a serverless architecture to minimize costs during varying load conditions.</p>
     `,
-    liveUrl: null,
+    liveUrl: "https://github.com/Synkhiv",
   },
   "groq-agents": {
     title: "Groq Agents",
@@ -139,7 +139,7 @@ export default function ProjectPage() {
       >
         <motion.h1 
           variants={itemVariants}
-          className="text-3xl md:text-4xl lg:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 font-black mb-4"
+          className="text-3xl md:text-4xl lg:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 font-black mb-4 py-1"
         >
           {project.title}
         </motion.h1>
