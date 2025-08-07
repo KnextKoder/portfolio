@@ -103,8 +103,7 @@ export default function ProjectPage() {
     hidden: { opacity: 0, y: 20 },
     visible: { 
       opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: [0.17, 0.67, 0.83, 0.67] }
+      y: 0
     }
   }
 
@@ -139,6 +138,7 @@ export default function ProjectPage() {
       >
         <motion.h1 
           variants={itemVariants}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-3xl md:text-4xl lg:text-5xl bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary/60 font-black mb-4 py-1"
         >
           {project.title}
@@ -146,6 +146,7 @@ export default function ProjectPage() {
         
         <motion.p 
           variants={itemVariants}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="text-lg text-gray-700 max-w-2xl mb-6"
         >
           {project.description}
@@ -153,6 +154,7 @@ export default function ProjectPage() {
         
         <motion.div 
           variants={itemVariants}
+          transition={{ duration: 0.5, ease: "easeOut" }}
           className="flex flex-wrap gap-2 mb-6"
         >
           {project.tags.map((tag) => (
@@ -179,6 +181,7 @@ export default function ProjectPage() {
         variants={itemVariants}
         initial="hidden"
         animate="visible"
+        transition={{ duration: 0.5, ease: "easeOut" }}
         className="mb-16"
       >
         <motion.div 
