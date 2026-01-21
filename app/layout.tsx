@@ -10,7 +10,7 @@ import { SidebarToggle } from "@/components/sidebar-toggle"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Marvel's",
   description: "Personal portfolio website",
 }
 
