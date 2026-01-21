@@ -23,10 +23,10 @@ const projects: Project[] = [
     tags: ["Typescript", "Python", "Pytorch", "Expo", "Electron", "Docker", "Azure"],
   },  
   {
-    slug: "wengine",
-    title: "Wengine",
+    slug: "adpadi",
+    title: "Adpadi",
     description: "An advertising platform for whatsapp",
-    image: "/wengine.svg",
+    image: "/adpadi.svg",
     tags: ["Nextjs", "Typescript", "Tailwindcss", "Pi Network- SDK"],
   },
   {

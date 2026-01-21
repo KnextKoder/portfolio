@@ -9,20 +9,20 @@ import { useState } from "react"
 import { motion } from "framer-motion"
 
 const projects = {
-  "wengine": {
-    title: "Wengine",
+  "adpadi": {
+    title: "Adpadi",
     description: "An advertising platform for whatsapp",
     images: [
-      "/wengine1.png",
-      "/wengine.svg",
+      "/adpadi1.png",
+      "/adpadi.svg",
     ],
     tags: ["Nextjs", "Typescript", "Tailwindcss", "Pi Network- SDK"],
     content: `
-      <p>Wengine is a groundbreaking advertising platform I built specifically for WhatsApp, addressing the untapped potential of the world's most popular messaging app. With over 2 billion users globally, WhatsApp represents an enormous opportunity for targeted, permission-based marketing that respects user privacy while delivering exceptional engagement metrics.</p>
+      <p>Adpadi is a groundbreaking advertising platform I built specifically for WhatsApp, addressing the untapped potential of the world's most popular messaging app. With over 2 billion users globally, WhatsApp represents an enormous opportunity for targeted, permission-based marketing that respects user privacy while delivering exceptional engagement metrics.</p>
       
-      <p>I architected Wengine as a full-stack solution using Next.js and TypeScript to ensure type safety and maintainability across the codebase. The platform features an intuitive dashboard for campaign management, advanced analytics, and a custom integration with the Pi Network SDK to enable cryptocurrency-based transactions for advertisers.</p>
+      <p>I architected Adpadi as a full-stack solution using Next.js and TypeScript to ensure type safety and maintainability across the codebase. The platform features an intuitive dashboard for campaign management, advanced analytics, and a custom integration with the Pi Network SDK to enable cryptocurrency-based transactions for advertisers.</p>
     `,
-    liveUrl: "https://wengine.com.ng",
+    liveUrl: "https://www.adpadi.com",
   },
   "maylng": {
     title: "Maylng",
@@ -52,7 +52,7 @@ const projects = {
       
       <p>The AWS component provides the coordination layer and fallback computing resources when the peer network cannot meet demand thresholds. My implementation uses a serverless architecture to minimize costs during varying load conditions.</p>
     `,
-    liveUrl: "https://github.com/Synkhiv",
+    liveUrl: "https://www.synkhiv.com",
   },
   "groq-agents": {
     title: "Groq Agents",
